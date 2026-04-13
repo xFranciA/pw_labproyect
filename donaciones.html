@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Donaciones — Servicios de Laboratorio SL</title>
+  <link rel="stylesheet" href="estilo.css" />
+  <link rel="icon" href="1775960879402_logo.png" type="image/png" />
+</head>
+<body>
+
+<!-- NAVEGACIÓN -->
+<nav>
+    <a class="nav-logo" href="pages_us.html">
+        <img src="1775960879402_logo.png" alt="Logo SL" />
+      <div class="nav-logo-text">
+        Servicios de Laboratorio
+        <span>Laboratorio Clínico</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+        <li><a href="html/pages_us.html">Acerca de Nosotros</a></li>
+        <li><a href="html/pages_donations.html" class="active">Donaciones</a></li>
+    </ul>
+</nav>
+
+<!-- HERO DONACIONES -->
+<div class="donation-hero">
+    <div>
+        <p class="hero-eyebrow">Tablero de Apoyo · Laboratorio SL</p>
+        <h1 class="hero-title">Juntos hacemos <em>posible</em> la salud</h1>
+        <div class="hero-line"></div>
+        <p class="hero-subtitle">Cada donación transforma vidas. Conoce los casos y contacta directamente con quienes necesitan tu apoyo.</p>
+    </div>
+</div>
+
+<!-- TABLERO DE DONACIONES -->
+<section id="tablero">
+    <div class="board-header">
+        <div>
+            <p class="section-label">Tablero de Noticias</p>
+            <h2 class="section-title" style="margin-bottom: 0;">Casos <em>Activos</em></h2>
+        </div>
+        <div class="board-filter">
+            <button class="filter-btn active" onclick="filterCards('all', this)">Todos</button>
+            <button class="filter-btn" onclick="filterCards('urgente', this)">Urgentes</button>
+            <button class="filter-btn" onclick="filterCards('tratamiento', this)">Tratamiento</button>
+            <button class="filter-btn" onclick="filterCards('equipos', this)">Equipos</button>
+        </div>
+    </div>
+
+    <div class="news-board" id="news-board">
+        <article class="news-card" data-category="urgente" onclick="openModal('modal-1')">
+            <div class="news-card-img-placeholder">
+
+            </div>
+            <div class="news-card-body">
+                <p class="news-card-tag">⚑ Urgente · [Tipo de caso]</p>
+                <h3 class="news-card-title">[Nombre o situación del primer caso]</h3>
+                <p class="news-card-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim.</p>
+                <div class="news-card-footer">
+                    <span class="news-card-date">[Fecha de publicación]</span>
+                    <button class="contact-btn">Contactar →</button>
+                </div>
+            </div>
+        </article>
+<!-- CARD 2 -->
+        <article class="news-card" data-category="tratamiento" onclick="openModal('modal-2')">
+            <div class="news-card-img-placeholder">
+
+            </div>
+            <div class="news-card-body">
+                <p class="news-card-tag">Tratamiento · [Tipo de caso]</p>
+                <h3 class="news-card-title">[Nombre o situación del segundo caso]</h3>
+                <p class="news-card-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>
+                <div class="news-card-footer">
+                    <span class="news-card-date">[Fecha de publicación]</span>
+                    <button class="contact-btn">Contactar →</button>
+                </div>
+            </div>
+        </article>
+
+        <!-- CARD 3 -->
+        <article class="news-card" data-category="equipos" onclick="openModal('modal-3')">
+            <div class="news-card-img-placeholder">
+
+            </div>
+            <div class="news-card-body">
+                <p class="news-card-tag">Equipos · [Tipo de necesidad]</p>
+                <h3 class="news-card-title">[Nombre o situación del tercer caso]</h3>
+                <p class="news-card-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+                <div class="news-card-footer">
+                    <span class="news-card-date">[Fecha de publicación]</span>
+                    <button class="contact-btn">Contactar →</button>
+                </div>
+            </div>
+        </article>
+
+        <!-- CARD 4 -->
+        <article class="news-card" data-category="tratamiento" onclick="openModal('modal-4')">
+            <div class="news-card-img-placeholder">
+
+        </div>
+        <div class="news-card-body">
+            <p class="news-card-tag">Tratamiento · [Tipo de caso]</p>
+            <h3 class="news-card-title">[Nombre o situación del cuarto caso]</h3>
+            <p class="news-card-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
+            <div class="news-card-footer">
+                <span class="news-card-date">[Fecha de publicación]</span>
+                <button class="contact-btn">Contactar →</button>
+            </div>
+        </div>
+    </article>
+
+<!-- ── MODALES DE CONTACTO ── -->
+<!-- Modal 1 -->
+    <div class="modal-overlay" id="modal-1">
+        <div class="modal" onclick="event.stopPropagation()">
+            <button class="modal-close" onclick="closeModal('modal-1')">✕</button>
+            <p class="modal-tag">⚑ Urgente · [Tipo de caso]</p>
+            <h3 class="modal-title">[Nombre o situación del primer caso]</h3>
+            <div class="modal-info">
+                <div class="modal-info-row">
+                    <span class="modal-info-label">Paciente</span>
+                    <span class="modal-info-value">[Nombre del paciente o descripción]</span>
+                </div>
+                <div class="modal-info-row">
+                    <span class="modal-info-label">Situación</span>
+                    <span class="modal-info-value">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</span>
+                </div>
+                <div class="modal-info-row">
+                    <span class="modal-info-label">Necesidad</span>
+                    <span class="modal-info-value">[Descripción de lo que necesita: monto, equipo, medicamento, etc.]</span>
+                </div>
+                <div class="modal-info-row">
+                    <span class="modal-info-label">Contacto directo</span>
+                    <span class="modal-info-value">[Teléfono / WhatsApp: 504-XXXX-XXXX]</span>
+                </div>
+                <div class="modal-info-row">
+                    <span class="modal-info-label">Correo</span>
+                    <span class="modal-info-value">[correo@ejemplo.com]</span>
+                </div>
+            </div>
+            <div class="modal-form">
+                <p class="section-label" style="margin-bottom: 14px;">Enviar mensaje de apoyo</p>
+                <input type="text" placeholder="Tu nombre" />
+                <input type="text" placeholder="Tu teléfono o correo" />
+                <textarea rows="4" placeholder="¿Cómo deseas ayudar? Escribe tu mensaje aquí..."></textarea>
+                <button class="btn-gold" onclick="sendMessage(this)">Enviar Mensaje →</button>
+            </div>
+        </div>
+    </div>
+
+<!-- Modal 2 -->
+    <div class="modal-overlay" id="modal-2">
+        <div class="modal" onclick="event.stopPropagation()">
+            <button class="modal-close" onclick="closeModal('modal-2')">✕</button>
+            <p class="modal-tag">Tratamiento · [Tipo de caso]</p>
+            <h3 class="modal-title">[Nombre o situación del segundo caso]</h3>
+            <div class="modal-info">
+                <div class="modal-info-row"><span class="modal-info-label">Paciente</span><span class="modal-info-value">[Nombre del paciente]</span></div>
+                <div class="modal-info-row"><span class="modal-info-label">Situación</span><span class="modal-info-value">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam.</span></div>
+                <div class="modal-info-row"><span class="modal-info-label">Necesidad</span><span class="modal-info-value">[Descripción de la necesidad específica]</span></div>
+                <div class="modal-info-row"><span class="modal-info-label">Contacto directo</span><span class="modal-info-value">[Teléfono / WhatsApp]</span></div>
+                <div class="modal-info-row"><span class="modal-info-label">Correo</span><span class="modal-info-value">[correo@ejemplo.com]</span></div>
+            </div>
+            <div class="modal-form">
+                <p class="section-label" style="margin-bottom: 14px;">Enviar mensaje de apoyo</p>
+                <input type="text" placeholder="Tu nombre" />
+                <input type="text" placeholder="Tu teléfono o correo" />
+                <textarea rows="4" placeholder="¿Cómo deseas ayudar? Escribe tu mensaje aquí..."></textarea>
+                <button class="btn-gold" onclick="sendMessage(this)">Enviar Mensaje →</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div class="modal-overlay" id="modal-3">
+        <div class="modal" onclick="event.stopPropagation()">
+            <button class="modal-close" onclick="closeModal('modal-3')">✕</button>
+            <p class="modal-tag">Equipos · [Tipo de necesidad]</p>
+            <h3 class="modal-title">[Nombre o situación del tercer caso]</h3>
+            <div class="modal-info">
+                <div class="modal-info-row"><span class="modal-info-label">Descripción</span><span class="modal-info-value">[Equipo o recurso necesario]</span></div>
+                <div class="modal-info-row"><span class="modal-info-label">Propósito</span><span class="modal-info-value">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit.</span></div>
+                <div class="modal-info-row"><span class="modal-info-label">Meta de donación</span><span class="modal-info-value">[Monto o cantidad necesaria]</span></div>
+                <div class="modal-info-row"><span class="modal-info-label">Contacto directo</span><span class="modal-info-value">[Teléfono / WhatsApp]</span></div>
+                <div class="modal-info-row"><span class="modal-info-label">Correo</span><span class="modal-info-value">[correo@ejemplo.com]</span></div>
+            </div>
+            <div class="modal-form">
+                <p class="section-label" style="margin-bottom: 14px;">Enviar mensaje de apoyo</p>
+                <input type="text" placeholder="Tu nombre" />
+                <input type="text" placeholder="Tu teléfono o correo" />
+                <textarea rows="4" placeholder="¿Cómo deseas ayudar? Escribe tu mensaje aquí..."></textarea>
+                <button class="btn-gold" onclick="sendMessage(this)">Enviar Mensaje →</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 4 -->
+    <div class="modal-overlay" id="modal-4">
+        <div class="modal" onclick="event.stopPropagation()">
+            <button class="modal-close" onclick="closeModal('modal-4')">✕</button>
+            <p class="modal-tag">Tratamiento · [Tipo de caso]</p>
+            <h3 class="modal-title">[Nombre o situación del cuarto caso]</h3>
+            <div class="modal-info">
+                <div class="modal-info-row"><span class="modal-info-label">Paciente</span><span class="modal-info-value">[Nombre del paciente]</span></div>
+                <div class="modal-info-row"><span class="modal-info-label">Situación</span><span class="modal-info-value">Lorem ipsum dolor sit amet consectetur adipiscing elit. Excepteur sint occaecat cupidatat.</span></div>
+                <div class="modal-info-row"><span class="modal-info-label">Necesidad</span><span class="modal-info-value">[Descripción de la necesidad específica]</span></div>
+                <div class="modal-info-row"><span class="modal-info-label">Contacto directo</span><span class="modal-info-value">[Teléfono / WhatsApp]</span></div>
+                <div class="modal-info-row"><span class="modal-info-label">Correo</span><span class="modal-info-value">[correo@ejemplo.com]</span></div>
+            </div>
+            <div class="modal-form">
+                <p class="section-label" style="margin-bottom: 14px;">Enviar mensaje de apoyo</p>
+                <input type="text" placeholder="Tu nombre" />
+                <input type="text" placeholder="Tu teléfono o correo" />
+                <textarea rows="4" placeholder="¿Cómo deseas ayudar? Escribe tu mensaje aquí..."></textarea>
+                <button class="btn-gold" onclick="sendMessage(this)">Enviar Mensaje →</button>
+            </div>
+        </div>
+    </div>
+
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Servicios de Laboratorio SL · Todos los derechos reservados</p>
+    <a href="pages_us.html">← Acerca de Nosotros</a>
+  </footer>
+
+  <script>
+    function openModal(id) {
+      document.getElementById(id).classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal(id) {
+      document.getElementById(id).classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    document.querySelectorAll('.modal-overlay').forEach(overlay => {
+      overlay.addEventListener('click', function () {
+        this.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') {
+        document.querySelectorAll('.modal-overlay.open').forEach(m => {
+          m.classList.remove('open');
+          document.body.style.overflow = '';
+        });
+      }
+    });
+
+    function filterCards(category, btn) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.news-card').forEach(card => {
+        if (category === 'all' || card.dataset.category === category) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    function sendMessage(btn) {
+      btn.textContent = '✓ Mensaje enviado';
+      btn.style.background = '#2a2a2a';
+      btn.style.color = 'var(--gold)';
+      btn.disabled = true;
+    }
+  </script>
+</body>
+</html>
