@@ -1,15 +1,15 @@
 /* =========================================
-   CSS GENERAL
-   Laboratorio Clinico Santa Lucia
-   Base general para todo el sitio
-   Responsive: telefono, tablet y PC
+  CSS GENERAL
+  Laboratorio Clinico Santa Lucia
+  Base general para todo el sitio
+  Responsive: telefono, tablet y PC
 ========================================= */
 
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap');
 
 /* =========================================
-   VARIABLES
+  VARIABLES
 ========================================= */
 :root {
   --color-verde: #1b4332;
@@ -518,7 +518,7 @@ header {
 }
 
 /* =========================================
-   FORMULARIOS
+  FORMULARIOS
 ========================================= */
 .formulario,
 .form {

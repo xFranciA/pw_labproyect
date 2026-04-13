@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Acerca de Nosotros – Laboratorio Clínico Santa Lucía</title>
+    <link rel="stylesheet" href="estilo/estilo.css" />
+</head>
+
+<body><!-- ══ BARRA DE NAVEGACIÓN (estructura del proyecto) ══ -->
+    <header>
+        <nav class="barra-nav">
+            <div>
+                <div class="hamburger-buttons" id="btn-menu">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <div class="logo-nav">
+                <a href="index.html">
+                    <img src="img/logo1.png" alt="Logo Laboratorio Santa Lucía" />
+                </a>
+            </div>
+            <ul class="menu-nav" id="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="ayudar.html">Cómo Ayudar</a></li>
+                <li><a href="galeria.html">Portafolio</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="eventos.html">Eventos</a></li>
+                <li><a href="donaciones.html">Donaciones</a></li>
+                <li><a href="contacto.html">Contáctenos</a></li>
+                <li><a href="fpreguntas.html">FAQ's</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<!-- ══ CONTENIDO PRINCIPAL ══ -->
+<main class="sl-main">
+    <section class="sl-hero">
+        <span class="sl-hero-eyebrow">Laboratorio Clínico Santa Lucía · Desde [Año]</span>
+        <h1>Ciencia al <em>servicio</em><br>de tu salud</h1>
+        <div class="sl-hero-line"></div>
+        <p>Excelencia diagnóstica, compromiso humano y rigor científico en cada análisis que realizamos para nuestra comunidad.</p>
+    </section>
+
+    <!-- ESTADÍSTICAS -->
+    <div class="sl-stats">
+        <div class="sl-stat">
+            <span class="sl-stat-number">+[N]</span>
+            <span class="sl-stat-label">Años de Trayectoria</span>
+        </div>
+        <div class="sl-stat">
+            <span class="sl-stat-number">4</span>
+            <span class="sl-stat-label">Áreas de Especialidad</span>
+        </div>
+        <div class="sl-stat">
+            <span class="sl-stat-number">+350</span>
+            <span class="sl-stat-label">Pacientes Atendidos</span>
+        </div>
+        <div class="sl-stat">
+            <span class="sl-stat-number">100%</span>
+            <span class="sl-stat-label">Compromiso Comunitario</span>
+        </div>
+    </div>
+
+    <!-- UBICACIÓN -->
+    <section class="sl-section" id="ubicacion">
+        <span class="sl-section-label">Encuéntranos</span>
+        <h2 class="sl-section-title">Nuestra <em>Ubicación</em></h2>
+        <div class="sl-two-col">
+            <div>
+                <img
+                class="sl-location-img"
+                src="img/fachada.jpg"
+                onerror="this.outerHTML='<div class=\'sl-location-img-placeholder\'>📸 Foto de la fachada del laboratorio</div>'"
+                alt="Fachada del Laboratorio Santa Lucía"/>
+                <div style="margin-top: 20px;">
+                    <span class="sl-section-label" style="margin-bottom: 10px;">Ver en mapa</span>
+                    <div class="sl-video-wrap" style="aspect-ratio: 16/9;">
+                        <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d[COORDS]!2d[LNG]!3d[LAT]!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zSG9uZHVyYXM!5e0!3m2!1ses!2shn!4v[ID]"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Ubicación Laboratorio Santa Lucía"
+                        ></iframe>
+                    </div>
+                </div>
+            </div>
+            <!-- Datos de contacto -->
+            <div>
+                <div class="sl-location-list">
+                    <div class="sl-location-item">
+                        <div class="sl-loc-icon"></div>
+                        <div>
+                            <h4>Dirección</h4>
+                            <p>[Dirección completa]<br>[Ciudad, Departamento, Honduras]</p>
+                        </div>
+                    </div>
+                    <div class="sl-location-item">
+                        <div class="sl-loc-icon"></div>
+                        <div>
+                            <h4>Horario de Atención</h4>
+                            <p>Lunes a Viernes: [Hora] – [Hora]<br>Sábados: [Hora] – [Hora]</p>
+                        </div>
+                    </div><div class="sl-location-item">
+                        <div class="sl-loc-icon"></div>
+                        <div>
+                            <h4>Teléfono / WhatsApp</h4>
+                            <p>[+504 XXXX-XXXX]</p>
+                        </div>
+                    </div>
+                    <div class="sl-location-item">
+                        <div class="sl-loc-icon">✉</div>
+                        <div>
+                            <h4>Correo Electrónico</h4>
+                            <p>[correo@laboratoriosantalucia.com]</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- A QUÉ SE DEDICA / ORIENTACIÓN -->
+    <section class="sl-section" id="dedicacion">
+        <span class="sl-section-label">Nuestra Especialidad</span>
+        <h2 class="sl-section-title">¿A qué nos <em>dedicamos?</em></h2>
+        <div class="sl-two-col-wide">
+            <div class="sl-body-text">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+            </div>
+            <div>
+                <span class="sl-section-label">Orientación del laboratorio</span>
+                <div class="sl-gold-rule"></div>
+                <p style="font-family: var(--sl-font-display); font-style: italic; font-size: 18px; color: var(--sl-white); line-height: 1.65;">
+                    "[Misión o frase que refleje el enfoque clínico y el compromiso del laboratorio con los pacientes]"</p>
+                </div>
+            </div>
+
+        <!-- Áreas de especialidad -->
+            <div class="sl-cards-grid">
+                <div class="sl-card">
+                    <div class="sl-card-icon"></div>
+                    <h3>Hematología</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris.</p>
+                </div>
+                <div class="sl-card">
+                    <div class="sl-card-icon">🧫</div>
+                    <h3>Parasitología</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris.</p>
+                </div>
+                <div class="sl-card">
+                    <div class="sl-card-icon">💧</div>
+                    <h3>Uroanálisis</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris.</p>
+                </div>
+                <div class="sl-card">
+                    <div class="sl-card-icon">🩸</div>
+                    <h3>Serología</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris.</p>
+                </div>
+                <div class="sl-card">
+                    <div class="sl-card-icon">🧬</div>
+                    <h3>[Área de Especialidad 5]</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris.</p>
+                </div>
+                <div class="sl-card">
+                    <div class="sl-card-icon">📋</div>
+                    <h3>[Área de Especialidad 6]</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HISTORIA -->
+    <section class="sl-section" id="historia">
+        <span class="sl-section-label">Nuestra Historia</span>
+        <h2 class="sl-section-title">Cómo <em>empezamos</em></h2>
+        <div class="sl-two-col">
+            <div class="sl-body-text">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.</p>
+            </div>
+            <!-- Línea de tiempo -->
+            <div class="sl-timeline">
+                <div class="sl-timeline-item">
+                    <div class="sl-timeline-year">[Año]</div>
+                    <div class="sl-timeline-title">Fundación del Laboratorio</div>
+                    <p class="sl-timeline-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+                <div class="sl-timeline-item">
+                    <div class="sl-timeline-year">[Año]</div>
+                    <div class="sl-timeline-title">[Primer hito importante]</div>
+                    <p class="sl-timeline-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam quis nostrud exercitation laboris.</p>
+                </div>
+                <div class="sl-timeline-item">
+                    <div class="sl-timeline-year">[Año]</div>
+                    <div class="sl-timeline-title">[Expansión o certificación]</div>
+                    <p class="sl-timeline-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit in voluptate velit.</p>
+                </div>
+                <div class="sl-timeline-item">
+                    <div class="sl-timeline-year">[Año]</div>
+                    <div class="sl-timeline-title">[Hito actual]</div>
+                    <p class="sl-timeline-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PERFIL MICROBIÓLOGO EN JEFE -->
+    <section class="sl-section" id="equipo">
+        <span class="sl-section-label">Equipo Científico</span>
+        <h2 class="sl-section-title">Microbiólogo <em>en Jefe</em></h2>
+        <div class="sl-two-col" style="align-items: start;">
+            <!-- Tarjeta de perfil -->
+            <div class="sl-profile-card">
+                <div class="sl-photo-wrap">
+                    <div class="sl-photo-placeholder" id="sl-photo-placeholder">
+                        <svg viewBox="0 0 24 24" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 4.5v15m7.5-7.5h-15" />
+                        </svg><span>Subir fotografía</span>
+                    </div>
+                    <img class="sl-photo-display" id="sl-photo-display" src="" alt="Foto del microbiólogo" />
+                    <input type="file" id="sl-photo-input" accept="image/*" style="display:none;" />
+                    <div class="sl-photo-corner"></div>
+                </div>
+                <h3 class="sl-profile-name">[Nombre Completo]</h3>
+                <p class="sl-profile-role">Microbiólogo en Jefe · Director Científico</p>
+                <div class="sl-gold-rule"></div>
+                <div class="sl-body-text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+                </div>
+                <div class="sl-badges">
+                    <span class="sl-badge">[Título Académico]</span>
+                    <span class="sl-badge">[Especialidad]</span>
+                    <span class="sl-badge">[Certificación]</span>
+                    <span class="sl-badge">[N] Años de Experiencia</span>
+                </div>
+            </div>
+            <!-- Trayectoria -->
+            <div>
+                <span class="sl-section-label" style="margin-bottom: 14px;">Formación y Trayectoria</span>
+                <div class="sl-body-text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis.</p>
+                </div>
+                <div style="margin-top: 32px;">
+                    <span class="sl-section-label" style="margin-bottom: 14px;">Áreas de Expertise</span>
+                    <div class="sl-location-list">
+                        <div class="sl-location-item">
+                            <div class="sl-loc-icon" style="font-size:11px; font-family: var(--sl-font-body);">01</div>
+                            <div>
+                                <h4>[Área de Expertise 1]</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut labore.</p>
+                            </div>
+                        </div>
+                        <div class="sl-location-item">
+                            <div class="sl-loc-icon" style="font-size:11px; font-family: var(--sl-font-body);">02</div>
+                            <div>
+                                <h4>[Área de Expertise 2]</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut labore.</p>
+                            </div>
+                        </div>
+                        <div class="sl-location-item">
+                            <div class="sl-loc-icon" style="font-size:11px; font-family: var(--sl-font-body);">03</div>
+                            <div>
+                                <h4>[Área de Expertise 3]</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut labore.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- VIDEO DEL LABORATORIO -->
+    <section class="sl-section" id="video">
+        <span class="sl-section-label">Conócenos</span>
+        <h2 class="sl-section-title">Nuestro <em>Laboratorio</em></h2>
+        <div class="sl-two-col-wide" style="align-items: center;">
+            <div class="sl-body-text">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            </div>
+            <div>
+                <div class="sl-video-wrap">
+                    <!--
+                    Opciones de video:
+                    -->
+                    <iframe
+                    src="https://www.youtube.com/embed/[TU_VIDEO_ID]"
+                    title="Video Laboratorio Santa Lucía"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                    ></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<!-- PIE DE PÁGINA -->
+<footer class="pie-pagina">
+    <div class="nombre-lab">Laboratorio Clínico Santa Lucía</div>
+    <p>"El primer paso hacia tu salud"</p>
+    <p>2026</p>
+</footer>
+
+<!-- Scripts: primero el compartido del proyecto, luego el específico de esta página -->
+<script src="javascrips/nosotros.js"></script>
+
+</body>
+</html>
