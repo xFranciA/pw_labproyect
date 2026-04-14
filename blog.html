@@ -6,6 +6,55 @@
         <title>Blog - Laboratorio Clínico Santa Lucía</title>
         <link rel="stylesheet" href="estilo/estilo.css">
         <script src="javascrips/blog_contacto.js"></script>
+        <style>
+        .fila-blog {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .img-blog {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .card, .tarjeta1 {
+            height: 100%;
+            background-color: var(--color-blanco);
+            border: 1px solid var(--color-borde);
+            border-radius: var(--radio-suave);
+            overflow: hidden;
+            box-shadow: var(--sombra-suave);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .card:hover, .tarjeta1:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--sombra-media);
+        }
+
+        .card h3, .tarjeta1 h3 {
+            font-family: var(--fuente-titulo);
+            color: var(--color-verde);
+            margin-top: 0;
+            margin-bottom: 0.7rem;
+            font-size: 1.25rem;
+        }
+
+        .card p, .tarjeta1 p {
+            line-height: 1.75;
+            font-size: 0.95rem;
+            margin: 0 0 0.9rem 0;
+        }
+    </style>
     </head>
     <body>
         <header>
@@ -47,44 +96,44 @@
 
         <main class="contenido-principal">
             <h2 class="titulo-seccion">Últimas Publicaciones</h2>
-            <div class="fila-blog">
+            <div class="fila-blog" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 25px; margin-bottom: 40px;">
                 
-                <article class="tarjeta">
+                <article class="tarjeta" style="height: 100%; background-color: #ffffff; border: 1px solid #d8d2c7; border-radius: 12px; overflow: hidden; box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08); display: flex; flex-direction: column;">
                     <img src="imgs/lab6.jpeg" alt="Servicios Integrales" class="img-blog">
                     <span class="etiqueta etiqueta-verde">Institucional</span>
                     <h3 style="font-family: var(--fuente-titulo); color: var(--color-verde); margin-bottom: 10px;">Nuestra Cartilla de Servicios</h3>
                     <p style="margin-bottom: 20px; font-size: 14px;">Conoce la amplia gama de exámenes que ofrecemos: desde hemogramas completos hasta pruebas de embarazo y VIH.</p>
                 </article>
 
-                <article class="tarjeta">
+                <article class="tarjeta" style="height: 100%; background-color: #ffffff; border: 1px solid #d8d2c7; border-radius: 12px; overflow: hidden; box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08); display: flex; flex-direction: column;">
                     <img src="imgs/lab2.jpeg" alt="Pruebas Rápidas" class="img-blog">
                     <span class="etiqueta etiqueta-dorada">Diagnóstico</span>
                     <h3 style="font-family: var(--fuente-titulo); color: var(--color-verde); margin-bottom: 10px;">Detección rápida de Dengue</h3>
                     <p style="margin-bottom: 20px; font-size: 14px;">La importancia de un diagnóstico temprano mediante pruebas combinadas para actuar a tiempo ante virus estacionales.</p>
                 </article>
 
-                <article class="tarjeta">
+                <article class="tarjeta" style="height: 100%; background-color: #ffffff; border: 1px solid #d8d2c7; border-radius: 12px; overflow: hidden; box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08); display: flex; flex-direction: column;">
                     <img src="imgs/lab3.jpeg" alt="Automatización" class="img-blog">
                     <span class="etiqueta etiqueta-verde">Innovación</span>
                     <h3 style="font-family: var(--fuente-titulo); color: var(--color-verde); margin-bottom: 10px;">Automatización Clínica</h3>
                     <p style="margin-bottom: 20px; font-size: 14px;">Descubre cómo los analizadores modernos reducen el tiempo de espera y aumentan la confiabilidad de tus resultados.</p>
                 </article>
 
-                <article class="tarjeta">
+                <article class="tarjeta" style="height: 100%; background-color: #ffffff; border: 1px solid #d8d2c7; border-radius: 12px; overflow: hidden; box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08); display: flex; flex-direction: column;">
                     <img src="imgs/lab4.jpeg" alt="Especialidades" class="img-blog">
                     <span class="etiqueta etiqueta-dorada">Servicios</span>
                     <h3 style="font-family: var(--fuente-titulo); color: var(--color-verde); margin-bottom: 10px;">Hematología y Química Sanguínea</h3>
                     <p style="margin-bottom: 20px; font-size: 14px;">Exploramos las principales áreas del laboratorio que ayudan a detectar desde anemias hasta problemas metabólicos.</p>
                 </article>
 
-                <article class="tarjeta">
+                <article class="tarjeta" style="height: 100%; background-color: #ffffff; border: 1px solid #d8d2c7; border-radius: 12px; overflow: hidden; box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08); display: flex; flex-direction: column;">
                     <img src="imgs/lab5.jpeg" alt="Muestras" class="img-blog">
                     <span class="etiqueta etiqueta-verde">Consejos</span>
                     <h3 style="font-family: var(--fuente-titulo); color: var(--color-verde); margin-bottom: 10px;">Toma correcta de muestras</h3>
                     <p style="margin-bottom: 20px; font-size: 14px;">Guía rápida sobre cómo preparar y entregar tus muestras de orina y heces para evitar contaminaciones o errores.</p>
                 </article>
 
-                <article class="tarjeta">
+                <article class="tarjeta" style="height: 100%; background-color: #ffffff; border: 1px solid #d8d2c7; border-radius: 12px; overflow: hidden; box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08); display: flex; flex-direction: column;">
                     <img src="imgs/lab1a.jpeg" alt="Tecnología Precisa" class="img-blog">
                     <span class="etiqueta etiqueta-dorada">Tecnología</span>
                     <h3 style="font-family: var(--fuente-titulo); color: var(--color-verde); margin-bottom: 10px;">Precisión en cada proceso</h3>
