@@ -53,7 +53,7 @@
     <div class="contenido-principal">
 
       <div class="caja-contexto tarjeta">
-        <h2>🏥 Nuestra Situación</h2>
+        <h2>Nuestra Situación</h2>
         <p>
           Somos un laboratorio clínico con recursos limitados, dedicado a brindar servicios de calidad
           a personas de bajos recursos en nuestra comunidad. Cada donación o gesto de apoyo —por pequeño
@@ -93,7 +93,7 @@
 
       </div>
 
-      <h2 class="titulo-seccion">📊 Nuestro Impacto</h2>
+      <h2 class="titulo-seccion">Nuestro Impacto</h2>
 
       <div class="fila-4">
         <div class="caja-impacto">
@@ -115,15 +115,14 @@
       </div>
 
       <div class="seccion-redes tarjeta" id="redes">
-        <h2>📱 Síguenos y Comparte</h2>
+        <h2>Síguenos y Comparte</h2>
         <p>Seguir nuestras redes y compartir nuestras publicaciones es una de las formas más fáciles de ayudarnos. Más
           visibilidad significa más apoyo para nuestros pacientes.</p>
 
         <div class="botones-redes">
-          <button class="boton-red red-facebook">📘 Facebook</button>
-          <button class="boton-red red-instagram">📸 Instagram</button>
-          <button class="boton-red red-whatsapp">💬 WhatsApp</button>
-          <button class="boton-red red-twitter">🐦 Twitter / X</button>
+          <button class="boton-red red-facebook"><a href="https://www.facebook.com/share/185XZctjKw/" target="_blank">📘 Facebook</a></button>
+          <button class="boton-red red-instagram"><a href="https://www.instagram.com/lab_santalucia_hn?igsh=MXhjaWloeXlvNHYzZg==" target="_blank">📸 Instagram</a></button>
+          <button class="boton-red red-whatsapp"><a href="https://wa.me/50493747595" target="_blank">💬 WhatsApp</a></button>
         </div>
 
         <div class="lista-acciones">
@@ -144,7 +143,7 @@
             No hay intermediarios — tu ayuda llega a quien la necesita.
           </p>
         </div>
-        <a href="donaciones.html" class="boton boton-dorado">❤️ Quiero Donar</a>
+        <a href="donaciones.html" class="boton boton-dorado">Quiero Donar</a>
       </div>
 
       <h2 class="titulo-seccion">💬 Voces de Nuestra Comunidad</h2>
@@ -174,12 +173,81 @@
     var botonCopiar = document.getElementById('btn-copiar');
     botonCopiar.addEventListener('click', function () {
       navigator.clipboard.writeText(window.location.href).then(function () {
-        botonCopiar.textContent = '✅ ¡Copiado!';
+        botonCopiar.textContent = '¡Copiado!';
         setTimeout(function () {
           botonCopiar.textContent = 'Copiar enlace';
         }, 2000);
       });
     });
+  </script>
+  <script>
+    // =============================================
+    //  Animación de aparición al hacer scroll
+    //  Laboratorio Clínico Santa Lucía
+    // =============================================
+
+    (function () {
+      // Estilos base para los elementos animados
+      var estiloBase = document.createElement('style');
+      estiloBase.textContent = `
+    .aparecer {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .aparecer.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  `;
+      document.head.appendChild(estiloBase);
+
+      // Selectores de los elementos que quieres animar
+      var selectores = [
+        '.tarjeta',
+        '.tarjeta-ayuda',
+        '.caja-impacto',
+        '.caja-contexto',
+        '.seccion-redes',
+        '.banner-donar',
+        '.testimonio',
+        '.titulo-seccion',
+        '.contenido-hero',
+        '.fila-3',
+        '.fila-4',
+        '.botones-redes',
+        '.lista-acciones'
+      ];
+
+      // Agrega la clase 'aparecer' a todos los elementos encontrados
+      selectores.forEach(function (selector) {
+        document.querySelectorAll(selector).forEach(function (el) {
+          el.classList.add('aparecer');
+        });
+      });
+
+      // Configura el observador
+      var observador = new IntersectionObserver(function (entradas) {
+        entradas.forEach(function (entrada, i) {
+          if (entrada.isIntersecting) {
+            // Pequeño retraso escalonado si hay varios elementos a la vez
+            setTimeout(function () {
+              entrada.target.classList.add('visible');
+            }, i * 80);
+            observador.unobserve(entrada.target); // Solo anima una vez
+          }
+        });
+      }, {
+        threshold: 0.12,      // Se activa cuando el 12% del elemento es visible
+        rootMargin: '0px 0px -40px 0px'  // Espera un poco antes del borde inferior
+      });
+
+      // Observa todos los elementos con clase 'aparecer'
+      document.querySelectorAll('.aparecer').forEach(function (el) {
+        observador.observe(el);
+      });
+
+    })();
   </script>
   <script src="javascript/animacion.js"></script>
 </body>
