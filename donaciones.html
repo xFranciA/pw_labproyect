@@ -62,19 +62,15 @@
 
         <!-- ══ TARJETA 1 ══ -->
         <article class="sl-news-card" onclick="slAbrirModal('sl-modal-1')">
-          <!--
-            ► IMAGEN TARJETA 1
-            Reemplaza AQUI_URL_IMAGEN_CASO_1 con la ruta real, ej: img/caso1.jpg
-          -->
           <img
             class="sl-card-img"
-            src="AQUI_URL_IMAGEN_CASO_1"
+            src="imgs/sergio.jpeg"
             alt="Imagen caso 1"
-            onerror="this.outerHTML='<div class=\'sl-card-img-placeholder\'>📸 Imagen del caso</div>'"
+            onerror="this.outerHTML='<div class=\'sl-card-img-placeholder\'>Imagen del caso</div>'"
           />
           <div class="sl-card-body">
-            <h3 class="sl-card-title">[Nombre o situación del primer caso]</h3>
-            <p class="sl-card-excerpt">[Descripción breve del caso. Explica la situación del paciente y el tipo de apoyo que necesita.]</p>
+            <h3 class="sl-card-title">Apoyo medico especializado </h3>
+            <p class="sl-card-excerpt">Niño de 12 años con Distrofia Muscular que requiere apoyo médico especializado.</p>
             <div class="sl-card-footer">
               <span class="sl-card-date">25/03/2025</span>
               <button class="sl-btn-contact">Contactar →</button>
@@ -84,21 +80,17 @@
 
         <!-- ══ TARJETA 2 ══ -->
         <article class="sl-news-card" onclick="slAbrirModal('sl-modal-2')">
-          <!--
-            ► IMAGEN TARJETA 2
-            Reemplaza AQUI_URL_IMAGEN_CASO_2 con la ruta real, ej: img/caso2.jpg
-          -->
           <img
             class="sl-card-img"
-            src="AQUI_URL_IMAGEN_CASO_2"
+            src="imgs/caso2.jpeg"
             alt="Imagen caso 2"
             onerror="this.outerHTML='<div class=\'sl-card-img-placeholder\'>📸 Imagen del caso</div>'"
           />
           <div class="sl-card-body">
-            <h3 class="sl-card-title">[Nombre o situación del segundo caso]</h3>
-            <p class="sl-card-excerpt">[Descripción breve del caso. Explica la situación del paciente y el tipo de apoyo que necesita.]</p>
+            <h3 class="sl-card-title">Comunidad de San Jose Copantillo, Madre e hijo </h3>
+            <p class="sl-card-excerpt">Doña Matea Gomez y a su hijo Carmen Diaz,  originarios de la Comunidad de San Jose Copantillo sufren derrame cerebral y una paralis infantil.</p>
             <div class="sl-card-footer">
-              <span class="sl-card-date">25/03/2025</span>
+              <span class="sl-card-date">16/03/2026</span>
               <button class="sl-btn-contact">Contactar →</button>
             </div>
           </div>
@@ -111,37 +103,29 @@
   <div class="sl-modal-overlay" id="sl-modal-1" onclick="slCerrarModal('sl-modal-1')">
     <div class="sl-modal" onclick="event.stopPropagation()">
       <button class="sl-modal-close" onclick="slCerrarModal('sl-modal-1')">✕</button>
-      <!--
-        ► IMAGEN MODAL 1
-        Reemplaza AQUI_URL_IMAGEN_MODAL_1 con la ruta real, ej: img/caso1-grande.jpg
-      -->
       <img
         class="sl-modal-img"
-        src="AQUI_URL_IMAGEN_MODAL_1"
+        src="imgs/sergio.jpeg"
         alt="Imagen caso 1"
         onerror="this.outerHTML='<div class=\'sl-modal-img-placeholder\'>📸 Imagen del caso</div>'"
       />
-      <h3 class="sl-modal-title">[Nombre o situación del primer caso]</h3>
+      <h3 class="sl-modal-title">Atencion medica especializada</h3>
       <div class="sl-modal-info">
         <div class="sl-modal-row">
           <span class="sl-modal-label">Paciente</span>
-          <span class="sl-modal-value">[Nombre del paciente o descripción]</span>
+          <span class="sl-modal-value">Sergio Adonay Pineda</span>
         </div>
         <div class="sl-modal-row">
           <span class="sl-modal-label">Situación</span>
-          <span class="sl-modal-value">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+          <span class="sl-modal-value">Niño de 12 años con Distrofia Muscular cuyo unico apoyo es su madre quien cuida de su bienestar diario, y lo lleva con ella en cada momento incluso cuando va a trabajar, las condiciones economicas le impiden acceder a los servicios médicos necesarios para una posible cura ante este problema que el niño a desarrollado hace ya mas de un año, condicion que ahora le impide poder caminar. Siendo una madre que vela por su hijo, hoy acude a nosotros para buscar apoyo y poder darle la atención que necesita.</span>
         </div>
         <div class="sl-modal-row">
           <span class="sl-modal-label">Necesidad</span>
-          <span class="sl-modal-value">[Descripción: monto, equipo, medicamento, etc.]</span>
+          <span class="sl-modal-value">Apoyo economico para el tratamiento medico de su enfermedad</span>
         </div>
         <div class="sl-modal-row">
           <span class="sl-modal-label">Contacto</span>
-          <span class="sl-modal-value">[+504 XXXX-XXXX]</span>
-        </div>
-        <div class="sl-modal-row">
-          <span class="sl-modal-label">Correo</span>
-          <span class="sl-modal-value">[correo@ejemplo.com]</span>
+          <span class="sl-modal-value">+504 9924-9060</span>
         </div>
       </div>
     </div>
@@ -151,37 +135,30 @@
   <div class="sl-modal-overlay" id="sl-modal-2" onclick="slCerrarModal('sl-modal-2')">
     <div class="sl-modal" onclick="event.stopPropagation()">
       <button class="sl-modal-close" onclick="slCerrarModal('sl-modal-2')">✕</button>
-      <!--
-        ► IMAGEN MODAL 2
-        Reemplaza AQUI_URL_IMAGEN_MODAL_2 con la ruta real, ej: img/caso2-grande.jpg
-      -->
+      
       <img
         class="sl-modal-img"
-        src="AQUI_URL_IMAGEN_MODAL_2"
+        src="imgs/caso2.jpeg"
         alt="Imagen caso 2"
         onerror="this.outerHTML='<div class=\'sl-modal-img-placeholder\'>📸 Imagen del caso</div>'"
       />
-      <h3 class="sl-modal-title">[Nombre o situación del segundo caso]</h3>
+      <h3 class="sl-modal-title">Comunidad de San Jose Copantillo, Madre e hijo</h3>
       <div class="sl-modal-info">
         <div class="sl-modal-row">
           <span class="sl-modal-label">Paciente</span>
-          <span class="sl-modal-value">[Nombre del paciente]</span>
+          <span class="sl-modal-value">Matea Gomez y Carmen Diaz</span>
         </div>
         <div class="sl-modal-row">
           <span class="sl-modal-label">Situación</span>
-          <span class="sl-modal-value">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</span>
+          <span class="sl-modal-value">Madre con hijos en situación de vulnerabilidad y necesidad de apoyo recurre a su apoyo para poder sustentarse tanto ella que sufre de un derrame cerebral, como su hijo que padece de una parálisis infantil, quienes ahora no cuentan con los recursos necesarios para su atención médica ni sustento diario</span>
         </div>
         <div class="sl-modal-row">
           <span class="sl-modal-label">Necesidad</span>
-          <span class="sl-modal-value">[Descripción de la necesidad específica]</span>
+          <span class="sl-modal-value">Apoyo economico, medicamentos, suministros de higiene personal y alimentos</span>
         </div>
         <div class="sl-modal-row">
           <span class="sl-modal-label">Contacto</span>
-          <span class="sl-modal-value">[+504 XXXX-XXXX]</span>
-        </div>
-        <div class="sl-modal-row">
-          <span class="sl-modal-label">Correo</span>
-          <span class="sl-modal-value">[correo@ejemplo.com]</span>
+          <span class="sl-modal-value">+504 92607070 </span>
         </div>
       </div>
     </div>
