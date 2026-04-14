@@ -1262,7 +1262,7 @@ header div .hamburger-buttons div{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 30px;
   cursor: pointer;
   border-bottom: 1px dashed rgba(201,168,76,.3);
   color: rgba(255,255,255,.35);
@@ -1729,7 +1729,7 @@ header div .hamburger-buttons div{
 }
 
 /* ══════════════════════════════════════
-   RESPONSIVE
+  RESPONSIVE
    ══════════════════════════════════════ */
 
 @media (max-width: 768px) {
