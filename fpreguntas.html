@@ -6,61 +6,11 @@
     <title>FAQ - Laboratorio Clínico</title>
     <link rel="stylesheet" href="estilo/estilo.css">
     <script src="javascript/java.js"></script>
-
-    <style>
-    /* Reset básico para asegurar consistencia */
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-    }
-
-    body {
-        background-color: #f4f7f6; /* Color de fondo suave opcional */
-        font-family: Arial, sans-serif;
-    }
-
-    /* Contenedor principal centrado */
-    .sl-main {
-        max-width: 1200px;  /* Ancho máximo de la página */
-        margin: 0 auto;     /* Centra el bloque horizontalmente */
-        padding: 20px 40px; /* Margen interno para despegar de los bordes */
-        background-color: #ffffff; /* Fondo blanco para el contenido */
-        box-shadow: 0 4px 10px rgba(0,0,0,0.05); /* Sombra sutil */
-        min-height: 100vh;
-    }
-
-    /* Centrar títulos y textos introductorios */
-    h1, p {
-        text-align: center;
-    }
-
-    /* Estilo para las tarjetas de FAQ para que se vean ordenadas */
-    .faq-content {
-        display: flex;
-        flex-direction: column;
-        gap: 15px; /* Espacio entre tarjetas */
-        margin-top: 30px;
-    }
-
-    .faq-card {
-        border-left: 5px solid #0056b3; /* Un toque de color lateral */
-        padding: 15px 25px;
-        background-color: #f9f9f9;
-        border-radius: 8px;
-    }
-
-    /* Ajuste para móviles */
-    @media (max-width: 768px) {
-        .sl-main {
-            padding: 15px 20px;
-        }
-    }
-</style>
 </head>
 <body>
 
-  <main class="sl-main">
+<main class="sl-main">
+
     <header class="header">
         <nav class="barra-nav">
             <div>
@@ -85,72 +35,100 @@
                 <li><a href="eventos.html">Eventos</a></li>
                 <li><a href="donaciones.html">Donaciones</a></li>
                 <li><a href="contacto.html">Contáctenos</a></li>
-                <li><a href="fpreguntas.html">FAQ's</a></li>
+                <li><a href="fpreguntas.html" class="pagina-activa">FAQ's</a></li>
             </ul>
         </nav>
     </header>
 
-        <h1>Preguntas Frecuentes</h1>
-        <p>Todo lo que necesita saber sobre nuestros servicios y atención.</p>
-        <br>
-        <section class="faq-content">
-            <div class="faq-card">
-                <h2 class="question">¿Dónde están ubicados?</h2>
-                <div class="answer">
-                    <p>Nuestra sede principal se encuentra en el <strong>Centro Médico Santa Lucía</strong>, Cr 71 N° 31 -297 local 104, frente al colegio Biffi.</p>
-                    <p>También atendemos en nuestras sedes de: Pie de la Popa, Turbaco, Clínica la Nuestra, Ronda Real, VIP y Manga.</p>
-                </div>
-            </div><br>
+    <section class="sl-hero">
+        <div class="sl-hero-inner">
+            <span class="sl-hero-eyebrow">Información</span>
+            <h1>Preguntas <em>Frecuentes</em></h1>
+            <div class="sl-hero-line"></div>
+            <p>Todo lo que necesita saber sobre nuestros servicios y atención.</p>
+        </div>
+    </section>
 
-            <div class="faq-card">
-                <h2 class="question">¿Cuál es el horario de atención?</h2>
-                <div class="answer">
-                    <ul>
-                        <li><strong>Lunes a viernes:</strong> 7:00 a.m. a 8:00 p.m.</li>
-                        <li><strong>Sábados:</strong> 7:00 a.m. a 6:00 p.m.</li>
-                        <li><strong>Domingos:</strong> 7:00 a.m. a 2:00 p.m.</li>
-                    </ul>
-                </div>
-            </div><br>
+    <section class="sl-section">
+        <span class="sl-section-label">FAQ's</span>
+        <h2 class="sl-section-title">Resolvemos sus dudas</h2>
 
-            <div class="faq-card">
-                <h2 class="question">¿Cómo agendar una cita o consultar resultados?</h2>
-                <div class="answer">
-                    <p>Contáctenos a través de nuestras líneas telefónicas:</p>
-                    <p class="highlight-text">3006522930 | 6056424720 | 6056424312 (ext. 201-204)</p>
-                </div>
-            </div><br>
+        <div class="caja-contexto">
+            <h2>¿Dónde están ubicados?</h2>
+            <p>Nuestra sede principal se encuentra en el <strong>Centro Médico Santa Lucía</strong>, Cr 71 N° 31-297 local 104, frente al colegio Biffi.</p>
+            <p>También atendemos en nuestras sedes de: Pie de la Popa, Turbaco, Clínica la Nuestra, Ronda Real, VIP y Manga.</p>
+        </div>
 
-            <div class="faq-card">
-                <h2 class="question">¿Qué necesito para la toma de muestras?</h2>
-                <div class="answer">
-                    <p>Es indispensable presentar su <strong>documento de identidad</strong> y la <strong>orden médica</strong> vigente (si aplica).</p>
+        <div class="caja-contexto">
+            <h2>¿Cuál es el horario de atención?</h2>
+            <div class="sl-horario-grid">
+                <div class="sl-horario-item">
+                    <span class="sl-horario-dia">Lunes a Viernes</span>
+                    <span class="sl-horario-hora">7:00 a.m. – 8:00 p.m.</span>
                 </div>
-            </div><br>
+                <div class="sl-horario-item">
+                    <span class="sl-horario-dia">Sábados</span>
+                    <span class="sl-horario-hora">7:00 a.m. – 6:00 p.m.</span>
+                </div>
+                <div class="sl-horario-item">
+                    <span class="sl-horario-dia">Domingos</span>
+                    <span class="sl-horario-hora">7:00 a.m. – 2:00 p.m.</span>
+                </div>
+            </div>
+        </div>
 
-            <div class="faq-card">
-                <h2 class="question">¿Es necesario el ayuno?</h2>
-                <div class="answer">
-                    <p>Para pruebas como glucosa o perfil lipídico, se requiere un ayuno de <strong>4 a 6 horas</strong> (solo ingesta de agua). 
-                       Recomendamos confirmar al momento de agendar.</p>
-                </div>
-            </div><br>
+        <div class="caja-contexto">
+            <h2>¿Cómo agendar una cita o consultar resultados?</h2>
+            <p>Contáctenos a través de nuestras líneas telefónicas:</p>
+            <p><strong>+504 9374-7595</strong></p>
+        </div>
 
-            <div class="faq-card">
-                <h2 class="question">¿Realizan pruebas a domicilio?</h2>
-                <div class="answer">
-                    <p><strong>Sí</strong>, contamos con servicio de toma de muestras a domicilio.
-                        Por favor, consulte disponibilidad y zonas de cobertura al agendar.</p>
-                </div>
-            </div><br>
+        <div class="caja-contexto">
+            <h2>¿Qué necesito para la toma de muestras?</h2>
+            <p>Es indispensable presentar su <strong>documento de identidad</strong> y la <strong>orden médica</strong> vigente (si aplica).</p>
+        </div>
 
-            <div class="faq-card">
-                <h2 class="question">¿Qué tipos de exámenes realizan?</h2>
-                <div class="answer">
-                    <p>Nuestro portafolio incluye: Hematología, Bioquímica, Inmunología, Uroanálisis, Coprología y pruebas especiales.</p>
+        <div class="aviso aviso-dorado">
+            <strong>¿Es necesario el ayuno?</strong><br>
+            Para pruebas como glucosa o perfil lipídico, se requiere un ayuno de <strong>4 a 6 horas</strong> (solo ingesta de agua). Recomendamos confirmar al momento de agendar.
+        </div>
+
+        <div class="aviso aviso-verde">
+            <strong>¿Realizan pruebas a domicilio?</strong><br>
+            Sí, contamos con servicio de toma de muestras a domicilio. Por favor, consulte disponibilidad y zonas de cobertura al agendar.
+        </div>
+
+        <div class="caja-contexto">
+            <h2>¿Qué tipos de exámenes realizan?</h2>
+            <div class="sl-cards-grid">
+                <div class="sl-card">
+                    <span class="sl-card-icon">🩸</span>
+                    <h3>Hematología</h3>
                 </div>
-            </div><br>
-        </section>
+                <div class="sl-card">
+                    <span class="sl-card-icon">🧪</span>
+                    <h3>Bioquímica</h3>
+                </div>
+                <div class="sl-card">
+                    <span class="sl-card-icon">🔬</span>
+                    <h3>Inmunología</h3>
+                </div>
+                <div class="sl-card">
+                    <span class="sl-card-icon">💧</span>
+                    <h3>Uroanálisis</h3>
+                </div>
+                <div class="sl-card">
+                    <span class="sl-card-icon">🧫</span>
+                    <h3>Coprología</h3>
+                </div>
+                <div class="sl-card">
+                    <span class="sl-card-icon">⚗️</span>
+                    <h3>Pruebas Especiales</h3>
+                </div>
+            </div>
+        </div>
+
+    </section>
 
     <footer class="pie-pagina">
         <div class="nombre-lab">Laboratorio Clínico Santa Lucía</div>
@@ -158,7 +136,15 @@
         <p>2026</p>
     </footer>
 
-    </main>
+</main>
+
+<script>
+    const btnMenu = document.getElementById('btn-menu');
+    const menu = document.getElementById('menu');
+    if (btnMenu && menu) {
+        btnMenu.addEventListener('click', () => menu.classList.toggle('activo'));
+    }
+</script>
 
 </body>
 </html>
