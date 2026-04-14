@@ -6,6 +6,57 @@
     <title>FAQ - Laboratorio Clínico</title>
     <link rel="stylesheet" href="estilo/estilo.css">
     <script src="javascript/java.js"></script>
+
+    <style>
+    /* Reset básico para asegurar consistencia */
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background-color: #f4f7f6; /* Color de fondo suave opcional */
+        font-family: Arial, sans-serif;
+    }
+
+    /* Contenedor principal centrado */
+    .sl-main {
+        max-width: 1200px;  /* Ancho máximo de la página */
+        margin: 0 auto;     /* Centra el bloque horizontalmente */
+        padding: 20px 40px; /* Margen interno para despegar de los bordes */
+        background-color: #ffffff; /* Fondo blanco para el contenido */
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05); /* Sombra sutil */
+        min-height: 100vh;
+    }
+
+    /* Centrar títulos y textos introductorios */
+    h1, p {
+        text-align: center;
+    }
+
+    /* Estilo para las tarjetas de FAQ para que se vean ordenadas */
+    .faq-content {
+        display: flex;
+        flex-direction: column;
+        gap: 15px; /* Espacio entre tarjetas */
+        margin-top: 30px;
+    }
+
+    .faq-card {
+        border-left: 5px solid #0056b3; /* Un toque de color lateral */
+        padding: 15px 25px;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+    }
+
+    /* Ajuste para móviles */
+    @media (max-width: 768px) {
+        .sl-main {
+            padding: 15px 20px;
+        }
+    }
+</style>
 </head>
 <body>
 
@@ -80,14 +131,16 @@
             <div class="faq-card">
                 <h2 class="question">¿Es necesario el ayuno?</h2>
                 <div class="answer">
-                    <p>Para pruebas como glucosa o perfil lipídico, se requiere un ayuno de <strong>4 a 6 horas</strong> (solo ingesta de agua). Recomendamos confirmar al momento de agendar.</p>
+                    <p>Para pruebas como glucosa o perfil lipídico, se requiere un ayuno de <strong>4 a 6 horas</strong> (solo ingesta de agua). 
+                       Recomendamos confirmar al momento de agendar.</p>
                 </div>
             </div><br>
 
             <div class="faq-card">
                 <h2 class="question">¿Realizan pruebas a domicilio?</h2>
                 <div class="answer">
-                    <p><strong>Sí</strong>, contamos con servicio de toma de muestras a domicilio. Por favor, consulte disponibilidad y zonas de cobertura al agendar.</p>
+                    <p><strong>Sí</strong>, contamos con servicio de toma de muestras a domicilio.
+                        Por favor, consulte disponibilidad y zonas de cobertura al agendar.</p>
                 </div>
             </div><br>
 
