@@ -6,6 +6,99 @@
         <title>Contacto - Laboratorio Clínico Santa Lucía</title>
         <link rel="stylesheet" href="estilo/estilo.css">
         <script src="javascrips/blog_contacto.js"></script>
+        <style>
+        .contenedor-contacto {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .formulario-contacto, .formulario {
+            background: var(--color-blanco);
+            padding: 30px;
+            border: 1px solid var(--color-borde);
+            border-radius: var(--radio-suave);
+            box-shadow: var(--sombra-suave);
+        }
+
+        .grupo-input {
+            margin-bottom: 15px;
+        }
+
+        .grupo-input label, .formulario label {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: var(--color-verde);
+        }
+
+        .grupo-input input, .grupo-input select, .grupo-input textarea,
+        .formulario input, .formulario select, .formulario textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--color-gris-claro);
+            border-radius: 6px;
+            font-family: inherit;
+            font-size: 0.95rem;
+            outline: none;
+            background-color: #fff;
+            transition: 0.2s ease;
+        }
+
+        .grupo-input input:focus, .formulario input:focus {
+            border-color: var(--color-dorado);
+            box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.15);
+        }
+
+        .info-contacto-lateral {
+            background: var(--color-negro);
+            color: var(--color-blanco);
+            padding: 30px;
+            border-radius: var(--radio-suave);
+        }
+
+        .item-info {
+            margin-bottom: 25px;
+        }
+
+        .item-info h4 {
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            color: var(--color-dorado);
+        }
+
+        .boton-social {
+            display: inline-block;
+            background-color: var(--color-dorado);
+            color: var(--color-negro);
+            padding: 10px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 13px;
+            margin-top: 5px;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .boton-social:hover {
+            background-color: #e8c97a;
+            transform: translateY(-2px);
+        }
+
+        .mapa-contenedor {
+            margin-top: 40px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        @media (min-width: 720px) {
+            .contenedor-contacto { grid-template-columns: 2fr 1fr; }
+        }
+    </style>
     </head>
     <body>
         <header>
@@ -42,24 +135,24 @@
         </section>
 
         <main class="contenido-principal">
-            <div class="contenedor-contacto">
+            <div class="contenedor-contacto" style="display: grid; grid-template-columns: 1fr; gap: 40px; margin-bottom: 50px;">
                 
-                <div class="formulario-contacto">
+                <div class="formulario-contacto" style="background: #ffffff; padding: 30px; border: 1px solid #d8d2c7; border-radius: 12px; box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);">
                     <h2 class="titulo-seccion">Envíanos un mensaje</h2>
                     <form action="#">
-                        <div class="grupo-input">
+                        <div class="grupo-input" style="margin-bottom: 15px;">
                             <label>Nombre Completo</label>
                             <input type="text" placeholder="Ej. Juan Pérez" required>
                         </div>
-                        <div class="grupo-input">
+                        <div class="grupo-input" style="margin-bottom: 15px;">
                             <label>Correo Electrónico</label>
                             <input type="email" placeholder="correo@ejemplo.com" required>
                         </div>
-                        <div class="grupo-input">
+                        <div class="grupo-input" style="margin-bottom: 15px;">
                             <label>Teléfono</label>
                             <input type="tel" placeholder="9999-9999">
                         </div>
-                        <div class="grupo-input">
+                        <div class="grupo-input" style="margin-bottom: 15px;">
                             <label>Examen de interés</label>
                             <select>
                                 <option>Hemograma Completo</option>
@@ -68,7 +161,7 @@
                                 <option>Otro examen / Consulta general</option>
                             </select>
                         </div>
-                        <div class="grupo-input">
+                        <div class="grupo-input" style="margin-bottom: 15px;">
                             <label>Mensaje</label>
                             <textarea rows="5" placeholder="¿En qué podemos ayudarte?"></textarea>
                         </div>
@@ -76,27 +169,37 @@
                     </form>
                 </div>
 
-                <div class="info-contacto-lateral">
+                <div class="info-contacto-lateral" style="background: #000000; color: #ffffff; padding: 30px; border-radius: 12px;">
                     <h2 class="titulo-seccion">Información</h2>
                     
-                    <div class="item-info">
+                    <div class="item-info" style="margin-bottom: 25px;">
                         <h4 style="color: var(--color-dorado);">Dirección</h4>
                         <p>San Andrés Lempira, Barrio el Centro, contiguo a centro de salud.</p>
                     </div>
 
-                    <div class="item-info">
+                    <div class="item-info" style="margin-bottom: 25px;">
                         <h4 style="color: var(--color-dorado);">Teléfonos</h4>
                         <p>9374-7595</p>
                     </div>
 
-                    <div class="item-info">
+                    <div class="item-info" style="margin-bottom: 25px;">
                         <h4 style="color: var(--color-dorado);">Horario de Atención</h4>
                         <p>Lunes a Viernes: 7:00 AM - 5:00 PM<br>Sábados: 7:00 AM - 12:00 PM</p>
+                    </div>
+
+                    <div class="item-info">
+                        <h4>Facebook</h4>
+                        <a href="https://www.facebook.com/share/185XZctjKw/" class="boton-social" target="_blank">Visitar Facebook</a>
+                    </div>
+
+                    <div class="item-info">
+                        <h4>Instagram</h4>
+                        <a href="https://www.instagram.com/lab_santalucia_hn?igsh=MXhjaWloeXlvNHYzZg==" class="boton-social" target="_blank">Visitar Instagram</a>
                     </div>
                 </div>
             </div>
 
-            <div class="mapa-contenedor">
+            <div class="mapa-contenedor" style="margin-top: 40px; border-radius: 8px; overflow: hidden;">
                 <h2 class="titulo-seccion">Nuestra Ubicación</h2>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3862.000000000000!2d-88.0000000!3d14.0000000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTTCsDAwJzAwLjAiTiA4OMKwMDAnMDAuMCJX!5e0!3m2!1ses!2shn!4v1700000000000" width="100%" height="400" style="border:0; border-radius: 12px;" allowfullscreen="" loading="lazy"></iframe>
             </div>
