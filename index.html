@@ -7,6 +7,64 @@
     <title>Inicio - Laboratorio Clínico Santa Lucía</title>
     <link rel="stylesheet" href="estilo/estilo.css">
     <script src="javascript/java.js"></script>
+<style>
+    /* 1. Contenedor principal: Separa del borde y centra */
+    .container {
+        width: 90%;
+        max-width: 1180px;
+        margin: 0 auto; /* Centra el bloque entero */
+        padding: 2rem 0;
+    }
+
+    /* 2. Renderizado de Misión y Visión a la par */
+    .bloque-mision-vision {
+        display: flex;
+        align-items: flex-start; /* Alinea imagen con el inicio del título */
+        gap: 20px;               /* Espacio entre la imagen y las palabras */
+        margin-bottom: 40px;
+        text-align: left;
+    }
+
+    /* Control de dimensiones para que la imagen no se desborde */
+    .bloque-mision-vision img {
+        flex-shrink: 0; 
+        object-fit: contain; /* Asegura que la imagen no se deforme al renderizar */
+        border-radius: 10px;
+    }
+
+    .bloque-mision-vision h2 {
+        margin-top: 0; /* Quita el espacio superior para alinear con la imagen */
+        color: var(--color-verde);
+    }
+
+    /* 3. Centrado y renderizado de la sección de noticias */
+    .text-center {
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .img-promocion {
+        display: block;
+        margin: 25px auto;   /* Centra la imagen horizontalmente */
+        max-width: 100%;     /* Evita que se salga de la pantalla en móviles */
+        height: auto;        /* Mantiene la proporción original */
+        border-radius: 15px;
+        box-shadow: var(--sombra-media);
+    }
+
+    /* Estilo para la lista de valores */
+    .seccion-valores {
+        padding: 25px;
+        background-color: #fff;
+        border-radius: 12px;
+        box-shadow: var(--sombra-suave);
+    }
+    
+    .seccion-valores ul {
+        list-style-position: inside;
+        padding: 0;
+    }
+</style>
 
 
 </head>
@@ -63,7 +121,8 @@
                     <p>Ser un laboratorio de referencia, reconocido por la excelencia, innovación y compromiso
                        con la salud de la población, consolidándonos como una institución líder en la región.</p>
                 </div>
-            </div><br>  
+            </div><br>
+            
 
             <div>
                 <div>
