@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Galería de Fotos | Laboratorio Clínico Santa Lucía</title>
   <link rel="stylesheet" href="estilo/estilo.css" />
-  <script defer src="javascrips/java.js"></script>
+  <script defer src="javascript/java.js"></script>
 </head>
 <body>
 
@@ -18,11 +18,13 @@
           <div></div>
         </div>
       </div>
+
       <div class="logo-nav">
         <a href="index.html">
-          <img src="imgs/logo.jpeg" alt="Logo Laboratorio Santa Lucía" />
+          <img src="imgs/logo1.png" alt="Logo Laboratorio Santa Lucía" />
         </a>
       </div>
+
       <ul class="menu-nav" id="menu">
         <li><a href="index.html">Inicio</a></li>
         <li><a href="nosotros.html">Nosotros</a></li>
@@ -38,196 +40,142 @@
     </nav>
   </header>
 
-  <main>
+  <main class="sl-main">
 
-    <section class="hero">
-      <picture>
-        <img src="https://picsum.photos/id/1044/1600/900" alt="Galería del laboratorio" />
-      </picture>
-
-      <div class="hero-contenido">
-        <span class="etiqueta">Laboratorio Clínico Santa Lucía</span>
-        <h1 class="titulo-principal">Galería de Fotos</h1>
+    <section class="seccion-hero">
+      <div class="contenido-hero">
+        <span class="etiqueta-hero">Laboratorio Clínico Santa Lucía</span>
+        <h1>Galería de <span>Fotos</span></h1>
         <p>
           Conoce nuestras instalaciones, áreas de atención, espacios de trabajo
           y parte del ambiente profesional con el que brindamos nuestros servicios.
         </p>
-        <a href="#galeria-principal" class="btn btn-dorado">Ver galería</a>
+        <br>
+        <a href="#galeria-principal" class="boton boton-dorado">Ver galería</a>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container">
-        <div class="bloque-info">
-          <h3>Nuestras instalaciones</h3>
-          <p>
-            En esta sección presentamos una muestra visual de las áreas más importantes
-            del laboratorio, incluyendo espacios de recepción, procesamiento, atención
-            y zonas de análisis clínico.
-          </p>
-        </div>
+    <section class="contenido-principal">
+      <div class="aviso aviso-verde">
+        <strong>Nuestras instalaciones:</strong> En esta sección presentamos una muestra visual
+        de las áreas más importantes del laboratorio, incluyendo espacios de recepción,
+        procesamiento, atención y zonas de análisis clínico.
       </div>
-    </section>
 
-    <section class="section" id="galeria-principal">
-      <div class="container">
-        <h2 class="titulo-seccion">Portafolio fotográfico</h2>
-        <p class="subtitulo-seccion">
-          Estas imágenes representan diferentes áreas del laboratorio clínico.
-        </p>
+      <h2 class="titulo-seccion" id="galeria-principal">Portafolio fotográfico</h2>
 
-        <div class="galeria-grid">
+      <div class="fila-3">
 
-          <div class="galeria-item">
-            <picture>
-              <img src="imgs/Ubi.png" alt="Recepción del laboratorio" />
-            </picture>
-            <div class="info-galeria">
-              <h3>Ubicación</h3>
-              <p>San Andrés, Lempira.</p>
-            </div>
-          </div>
-
-          <div class="galeria-item">
-            <picture>
-              <img src="imgs/Recepcion.png" alt="Área de espera" />
-            </picture>
-            <div class="info-galeria">
-              <h3>Área de espera</h3>
-              <p>Zona cómoda y segura para pacientes y acompañantes mientras esperan atención.</p>
-            </div>
-          </div>
-
-          <div class="galeria-item">
-            <picture>
-              <img src="imgs/Muestra.png" alt="Toma de muestras" />
-            </picture>
-            <div class="info-galeria">
-              <h3>Toma de muestras</h3>
-              <p>Espacio preparado para realizar procedimientos de forma ordenada y profesional.</p>
-            </div>
-          </div>
-
-          <div class="galeria-item">
-            <picture>
-              <img src="imgs/Hepatico.jpeg" alt="Equipos del laboratorio" />
-            </picture>
-            <div class="info-galeria">
-              <h3>Equipos especializados</h3>
-              <p>Herramientas y equipos utilizados para obtener resultados confiables y precisos.</p>
-            </div>
-          </div>
-
-          <div class="galeria-item">
-            <picture>
-              <img src="imgs/Hematologia.jpeg" alt="Procesamiento de muestras" />
-            </picture>
-            <div class="info-galeria">
-              <h3>Procesamiento de muestras</h3>
-              <p>Área en la que se lleva a cabo el manejo y análisis de distintas muestras clínicas.</p>
-            </div>
-          </div>
-
-          <div class="galeria-item">
-            <picture>
-              <img src="imgs/Sanguinea.jpeg" alt="Instalaciones del laboratorio" />
-            </picture>
-            <div class="info-galeria">
-              <h3>Instalaciones modernas</h3>
-              <p>Vista general de espacios acondicionados para el trabajo clínico y la atención segura.</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <h2 class="titulo-seccion">Visita Nuestro Centro</h2>
-        <p class="subtitulo-seccion">
-          Te invitamos a conocer nuestras instalaciones y el ambiente profesional en el que
-          desarrollamos nuestros servicios clínicos y de atención al paciente.
-        </p>
-
-        <div class="row">
-          <div class="col-12 col-m-6 col-l-3">
-            <div class="card">
-              <div class="card-body text-center">
-                <h3>Instalaciones Modernas</h3>
-                <p>
-                  Contamos con espacios organizados y funcionales, diseñados para brindar
-                  comodidad, orden y una atención adecuada a cada paciente.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-12 col-m-6 col-l-3">
-            <div class="card">
-              <div class="card-body text-center">
-                <h3>Equipo Actualizado</h3>
-                <p>
-                  Nuestro laboratorio dispone de recursos y herramientas que apoyan la
-                  realización de estudios clínicos con precisión y confianza.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-12 col-m-6 col-l-3">
-            <div class="card">
-              <div class="card-body text-center">
-                <h3>Comodidad del Paciente</h3>
-                <p>
-                  Procuramos ofrecer una atención en un ambiente agradable, limpio y seguro,
-                  pensado para el bienestar de quienes nos visitan.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-12 col-m-6 col-l-3">
-            <div class="card">
-              <div class="card-body text-center">
-                <h3>Calidad en el Servicio</h3>
-                <p>
-                  Trabajamos con responsabilidad y compromiso para ofrecer una atención seria,
-                  ordenada y enfocada en las necesidades de cada persona.
-                </p>
-              </div>
-            </div>
+        <div class="tarjeta sl-card">
+          <img src="imgs/Galeria/Ubi.png" alt="Ubicación del laboratorio" class="sl-card-img">
+          <div class="sl-card-body">
+            <span class="etiqueta etiqueta-dorada">Ubicación</span>
+            <h3 class="sl-card-title">San Andrés, Lempira</h3>
+            <p class="sl-card-excerpt">
+              Lugar donde se encuentra ubicado el Laboratorio Clínico Santa Lucía.
+            </p>
           </div>
         </div>
-      </div>
-    </section>
 
-    <section class="section">
-      <div class="container">
-        <div class="banner">
+        <div class="tarjeta sl-card">
+          <img src="imgs/Galeria/Recepcion.png" alt="Área de espera" class="sl-card-img">
+          <div class="sl-card-body">
+            <span class="etiqueta etiqueta-verde">Recepción</span>
+            <h3 class="sl-card-title">Área de espera</h3>
+            <p class="sl-card-excerpt">
+              Zona cómoda y segura para pacientes y acompañantes mientras esperan atención.
+            </p>
+          </div>
+        </div>
+
+        <div class="tarjeta sl-card">
+          <img src="imgs/Galeria/Toma Muestras.png" alt="Toma de muestras" class="sl-card-img">
+          <div class="sl-card-body">
+            <span class="etiqueta etiqueta-dorada">Atención</span>
+            <h3 class="sl-card-title">Toma de muestras</h3>
+            <p class="sl-card-excerpt">
+              Espacio preparado para realizar procedimientos de forma ordenada y profesional.
+            </p>
+          </div>
+        </div>
+
+        <div class="tarjeta sl-card">
+          <img src="imgs/Galeria/Hepatico.jpeg" alt="Equipos del laboratorio" class="sl-card-img">
+          <div class="sl-card-body">
+            <span class="etiqueta etiqueta-verde">Equipos</span>
+            <h3 class="sl-card-title">Equipos especializados</h3>
+            <p class="sl-card-excerpt">
+              Herramientas y equipos utilizados para obtener resultados confiables y precisos.
+            </p>
+          </div>
+        </div>
+
+        <div class="tarjeta sl-card">
+          <img src="imgs/Galeria/Hematologia.jpeg" alt="Procesamiento de muestras" class="sl-card-img">
+          <div class="sl-card-body">
+            <span class="etiqueta etiqueta-dorada">Procesos</span>
+            <h3 class="sl-card-title">Procesamiento de muestras</h3>
+            <p class="sl-card-excerpt">
+              Área en la que se lleva a cabo el manejo y análisis de distintas muestras clínicas.
+            </p>
+          </div>
+        </div>
+
+        <div class="tarjeta sl-card">
+          <img src="imgs/Galeria/Sanguinea.jpeg" alt="Instalaciones del laboratorio" class="sl-card-img">
+          <div class="sl-card-body">
+            <span class="etiqueta etiqueta-verde">Espacios</span>
+            <h3 class="sl-card-title">Instalaciones modernas</h3>
+            <p class="sl-card-excerpt">
+              Vista general de espacios acondicionados para el trabajo clínico y la atención segura.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <h2 class="titulo-seccion">Visita nuestro centro</h2>
+
+      <div class="fila-4">
+        <div class="caja-impacto">
+          <span class="numero-impacto">1</span>
+          <p><strong>Instalaciones modernas</strong><br>Espacios organizados y funcionales para una mejor atención.</p>
+        </div>
+
+        <div class="caja-impacto">
+          <span class="numero-impacto">2</span>
+          <p><strong>Equipo actualizado</strong><br>Recursos que apoyan estudios clínicos con precisión y confianza.</p>
+        </div>
+
+        <div class="caja-impacto">
+          <span class="numero-impacto">3</span>
+          <p><strong>Comodidad del paciente</strong><br>Ambiente agradable, limpio y seguro para cada visita.</p>
+        </div>
+
+        <div class="caja-impacto">
+          <span class="numero-impacto">4</span>
+          <p><strong>Calidad en el servicio</strong><br>Atención seria, ordenada y enfocada en cada persona.</p>
+        </div>
+      </div>
+
+      <div class="banner-campania">
+        <div>
           <h3>Compromiso con la calidad</h3>
           <p>
             Nuestro laboratorio busca ofrecer un ambiente confiable, organizado y profesional,
             reflejando en cada área el compromiso que tenemos con la salud de nuestros pacientes.
           </p>
-          <a href="contacto.html" class="btn btn-dorado">Contáctanos</a>
         </div>
+        <a href="contacto.html" class="boton boton-dorado">Contáctanos</a>
       </div>
     </section>
 
-    <div class="visor-galeria" id="visor-galeria">
-      <div class="visor-contenido">
-        <button class="cerrar-visor" id="cerrar-visor">&times;</button>
-        <img src="" alt="Imagen ampliada" id="imagen-visor">
-      </div>
-    </div>
-
   </main>
 
-  <footer class="pie-pagina">
+    <footer class="pie-pagina">
     <div class="nombre-lab">Laboratorio Clínico Santa Lucía</div>
-    <p>Atención profesional, instalaciones adecuadas y compromiso con tu bienestar.</p>
-    <p>2026 - Todos los derechos reservados</p>
+    <p>"El primer paso hacia tu salud"</p>
+    <p>&copy; 2026</p>
   </footer>
 
 </body>
