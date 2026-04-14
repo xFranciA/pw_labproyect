@@ -1,4 +1,3 @@
-
 /* ── ABRIR MODAL ── */
 function slAbrirModal(id) {
   var modal = document.getElementById(id);

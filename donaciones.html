@@ -2,27 +2,25 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Donaciones - Laboratorio Clínico Santa Lucía</title>
-    <link rel="stylesheet" href="estilo/estilo.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Donaciones - Laboratorio Clínico Santa Lucía</title>
+  <link rel="stylesheet" href="estilo/estilo.css" />
 </head>
 
 <body>
 
-  <!-- ══ BARRA DE NAVEGACIÓN (estructura del proyecto) ══ -->
+  <!-- ══ NAVEGACIÓN ══ -->
   <header>
     <nav class="barra-nav">
       <div>
         <div class="hamburger-buttons" id="btn-menu">
-          <div></div>
-          <div></div>
-          <div></div>
+          <div></div><div></div><div></div>
         </div>
       </div>
       <div class="logo-nav">
         <a href="index.html">
-          <img src="img/logo1.png" alt="Logo Laboratorio Santa Lucía" />
+          <img src="imgs/logo1.png" alt="Logo Laboratorio Clinico Santa Lucía" />
         </a>
       </div>
       <ul class="menu-nav" id="menu">
@@ -33,209 +31,176 @@
         <li><a href="galeria.html">Portafolio</a></li>
         <li><a href="blog.html">Blog</a></li>
         <li><a href="eventos.html">Eventos</a></li>
-        <li><a href="donaciones.html">Donaciones</a></li>
+        <li><a href="donaciones.html" class="pagina-activa">Donaciones</a></li>
         <li><a href="contacto.html">Contáctenos</a></li>
         <li><a href="fpreguntas.html">FAQ's</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- ══ CONTENIDO PRINCIPAL ══ -->
   <main class="sl-main">
 
-    <!-- HERO -->
+    <!-- ══ HERO ══ -->
     <section class="sl-hero">
-      <span class="sl-hero-eyebrow">Tablero de Apoyo · Laboratorio Santa Lucía</span>
-      <h1>Juntos hacemos <em>posible</em><br>la salud</h1>
-      <div class="sl-hero-line"></div>
-      <p>Cada donación transforma vidas. Conoce los casos activos y contacta directamente con quienes necesitan tu apoyo.</p>
+      <div class="sl-hero-inner">
+        <span class="sl-hero-eyebrow">Tablero de Apoyo · Laboratorio Clínico Santa Lucía</span>
+        <h1>Juntos lo hacemos <em>posible</em></h1>
+        <div class="sl-hero-line"></div>
+        <p>Cada donación transforma vidas. Conoce y contacta directamente con quienes necesitan tu apoyo.</p>
+      </div>
     </section>
 
-    <!-- TABLERO DE DONACIONES -->
-    <section class="sl-section" id="tablero">
+    <!-- ══ TABLERO ══ -->
+    <div class="sl-board-wrap">
 
       <div class="sl-board-header">
-        <div>
-          <span class="sl-section-label">Tablero de Noticias</span>
-          <h2 class="sl-section-title" style="margin-bottom: 0;">Casos <em>Activos</em></h2>
-        </div>
-        <div class="sl-filters">
-          <button class="sl-filter-btn activo" onclick="slFiltrar('todos', this)">Todos</button>
-          <button class="sl-filter-btn" onclick="slFiltrar('urgente', this)">Urgentes</button>
-          <button class="sl-filter-btn" onclick="slFiltrar('tratamiento', this)">Tratamiento</button>
-          <button class="sl-filter-btn" onclick="slFiltrar('equipos', this)">Equipos</button>
-        </div>
+        <span class="sl-section-label">Tablero de Noticias</span>
+        <h2 class="sl-section-title">Casos que necesitan <em>tu apoyo</em></h2>
       </div>
 
       <div class="sl-news-board" id="sl-tablero">
 
-        <!-- TARJETA 1 -->
-        <article class="sl-news-card" data-categoria="urgente" onclick="slAbrirModal('sl-modal-1')">
-          <div class="sl-card-img-placeholder">📸 Foto del caso / paciente</div>
+        <!-- ══ TARJETA 1 ══ -->
+        <article class="sl-news-card" onclick="slAbrirModal('sl-modal-1')">
+          <!--
+            ► IMAGEN TARJETA 1
+            Reemplaza AQUI_URL_IMAGEN_CASO_1 con la ruta real, ej: img/caso1.jpg
+          -->
+          <img
+            class="sl-card-img"
+            src="AQUI_URL_IMAGEN_CASO_1"
+            alt="Imagen caso 1"
+            onerror="this.outerHTML='<div class=\'sl-card-img-placeholder\'>📸 Imagen del caso</div>'"
+          />
           <div class="sl-card-body">
-            <span class="sl-card-tag">⚑ Urgente · [Tipo de caso]</span>
             <h3 class="sl-card-title">[Nombre o situación del primer caso]</h3>
-            <p class="sl-card-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim.</p>
+            <p class="sl-card-excerpt">[Descripción breve del caso. Explica la situación del paciente y el tipo de apoyo que necesita.]</p>
             <div class="sl-card-footer">
-              <span class="sl-card-date">[Fecha de publicación]</span>
+              <span class="sl-card-date">25/03/2025</span>
               <button class="sl-btn-contact">Contactar →</button>
             </div>
           </div>
         </article>
 
-        <!-- TARJETA 2 -->
-        <article class="sl-news-card" data-categoria="tratamiento" onclick="slAbrirModal('sl-modal-2')">
-          <div class="sl-card-img-placeholder">📸 Foto del caso / paciente</div>
+        <!-- ══ TARJETA 2 ══ -->
+        <article class="sl-news-card" onclick="slAbrirModal('sl-modal-2')">
+          <!--
+            ► IMAGEN TARJETA 2
+            Reemplaza AQUI_URL_IMAGEN_CASO_2 con la ruta real, ej: img/caso2.jpg
+          -->
+          <img
+            class="sl-card-img"
+            src="AQUI_URL_IMAGEN_CASO_2"
+            alt="Imagen caso 2"
+            onerror="this.outerHTML='<div class=\'sl-card-img-placeholder\'>📸 Imagen del caso</div>'"
+          />
           <div class="sl-card-body">
-            <span class="sl-card-tag">Tratamiento · [Tipo de caso]</span>
             <h3 class="sl-card-title">[Nombre o situación del segundo caso]</h3>
-            <p class="sl-card-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+            <p class="sl-card-excerpt">[Descripción breve del caso. Explica la situación del paciente y el tipo de apoyo que necesita.]</p>
             <div class="sl-card-footer">
-              <span class="sl-card-date">[Fecha de publicación]</span>
+              <span class="sl-card-date">25/03/2025</span>
               <button class="sl-btn-contact">Contactar →</button>
             </div>
           </div>
         </article>
-
-        <!-- TARJETA 3 -->
-        <article class="sl-news-card" data-categoria="equipos" onclick="slAbrirModal('sl-modal-3')">
-          <div class="sl-card-img-placeholder">📸 Foto del caso / equipo</div>
-          <div class="sl-card-body">
-            <span class="sl-card-tag">Equipos · [Tipo de necesidad]</span>
-            <h3 class="sl-card-title">[Nombre o situación del tercer caso]</h3>
-            <p class="sl-card-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
-            <div class="sl-card-footer">
-              <span class="sl-card-date">[Fecha de publicación]</span>
-              <button class="sl-btn-contact">Contactar →</button>
-            </div>
-          </div>
-        </article>
-
-        <!-- TARJETA 4 -->
-        <article class="sl-news-card" data-categoria="tratamiento" onclick="slAbrirModal('sl-modal-4')">
-          <div class="sl-card-img-placeholder">📸 Foto del caso / paciente</div>
-          <div class="sl-card-body">
-            <span class="sl-card-tag">Tratamiento · [Tipo de caso]</span>
-            <h3 class="sl-card-title">[Nombre o situación del cuarto caso]</h3>
-            <p class="sl-card-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa.</p>
-            <div class="sl-card-footer">
-              <span class="sl-card-date">[Fecha de publicación]</span>
-              <button class="sl-btn-contact">Contactar →</button>
-            </div>
-          </div>
-        </article>
-
-        <!-- TARJETA 5 -->
-        <article class="sl-news-card" data-categoria="urgente" onclick="slAbrirModal('sl-modal-5')">
-          <div class="sl-card-img-placeholder">📸 Foto del caso / paciente</div>
-          <div class="sl-card-body">
-            <span class="sl-card-tag">⚑ Urgente · [Tipo de caso]</span>
-            <h3 class="sl-card-title">[Nombre o situación del quinto caso]</h3>
-            <p class="sl-card-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem.</p>
-            <div class="sl-card-footer">
-              <span class="sl-card-date">[Fecha de publicación]</span>
-              <button class="sl-btn-contact">Contactar →</button>
-            </div>
-          </div>
-        </article>
-
-        <!-- TARJETA 6 -->
-        <article class="sl-news-card" data-categoria="equipos" onclick="slAbrirModal('sl-modal-6')">
-          <div class="sl-card-img-placeholder">📸 Foto del caso / equipo</div>
-          <div class="sl-card-body">
-            <span class="sl-card-tag">Equipos · [Tipo de necesidad]</span>
-            <h3 class="sl-card-title">[Nombre o situación del sexto caso]</h3>
-            <p class="sl-card-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut.</p>
-            <div class="sl-card-footer">
-              <span class="sl-card-date">[Fecha de publicación]</span>
-              <button class="sl-btn-contact">Contactar →</button>
-            </div>
-          </div>
-        </article>
-
-      </div><!-- /sl-news-board -->
-    </section>
+      </div>
+    </div>
 
   </main>
-
-  <!-- ══ MODALES DE CONTACTO ══ -->
-
-  <!-- Modal 1 -->
-  <div class="sl-modal-overlay" id="sl-modal-1">
+  <!-- ══ MODAL 1 ══ -->
+  <div class="sl-modal-overlay" id="sl-modal-1" onclick="slCerrarModal('sl-modal-1')">
     <div class="sl-modal" onclick="event.stopPropagation()">
       <button class="sl-modal-close" onclick="slCerrarModal('sl-modal-1')">✕</button>
-      <span class="sl-modal-tag">⚑ Urgente · [Tipo de caso]</span>
+      <!--
+        ► IMAGEN MODAL 1
+        Reemplaza AQUI_URL_IMAGEN_MODAL_1 con la ruta real, ej: img/caso1-grande.jpg
+      -->
+      <img
+        class="sl-modal-img"
+        src="AQUI_URL_IMAGEN_MODAL_1"
+        alt="Imagen caso 1"
+        onerror="this.outerHTML='<div class=\'sl-modal-img-placeholder\'>📸 Imagen del caso</div>'"
+      />
       <h3 class="sl-modal-title">[Nombre o situación del primer caso]</h3>
       <div class="sl-modal-info">
-        <div class="sl-modal-row"><span class="sl-modal-label">Paciente</span><span class="sl-modal-value">[Nombre del paciente o descripción]</span></div>
-        <div class="sl-modal-row"><span class="sl-modal-label">Situación</span><span class="sl-modal-value">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</span></div>
-        <div class="sl-modal-row"><span class="sl-modal-label">Necesidad</span><span class="sl-modal-value">[Descripción: monto, equipo, medicamento, etc.]</span></div>
-        <div class="sl-modal-row"><span class="sl-modal-label">Contacto</span><span class="sl-modal-value">[+504 XXXX-XXXX]</span></div>
-        <div class="sl-modal-row"><span class="sl-modal-label">Correo</span><span class="sl-modal-value">[correo@ejemplo.com]</span></div>
-      </div>
-      <div class="sl-modal-form">
-        <span class="sl-modal-form-label">Enviar mensaje de apoyo</span>
-        <input type="text" placeholder="Tu nombre" />
-        <input type="text" placeholder="Tu teléfono o correo" />
-        <textarea rows="4" placeholder="¿Cómo deseas ayudar? Escribe tu mensaje aquí..."></textarea>
-        <button class="sl-btn-gold" onclick="slEnviarMensaje(this)">Enviar Mensaje →</button>
+        <div class="sl-modal-row">
+          <span class="sl-modal-label">Paciente</span>
+          <span class="sl-modal-value">[Nombre del paciente o descripción]</span>
+        </div>
+        <div class="sl-modal-row">
+          <span class="sl-modal-label">Situación</span>
+          <span class="sl-modal-value">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+        </div>
+        <div class="sl-modal-row">
+          <span class="sl-modal-label">Necesidad</span>
+          <span class="sl-modal-value">[Descripción: monto, equipo, medicamento, etc.]</span>
+        </div>
+        <div class="sl-modal-row">
+          <span class="sl-modal-label">Contacto</span>
+          <span class="sl-modal-value">[+504 XXXX-XXXX]</span>
+        </div>
+        <div class="sl-modal-row">
+          <span class="sl-modal-label">Correo</span>
+          <span class="sl-modal-value">[correo@ejemplo.com]</span>
+        </div>
       </div>
     </div>
   </div>
 
-  <!-- Modal 2 -->
-  <div class="sl-modal-overlay" id="sl-modal-2">
+  <!-- ══ MODAL 2 ══ -->
+  <div class="sl-modal-overlay" id="sl-modal-2" onclick="slCerrarModal('sl-modal-2')">
     <div class="sl-modal" onclick="event.stopPropagation()">
       <button class="sl-modal-close" onclick="slCerrarModal('sl-modal-2')">✕</button>
-      <span class="sl-modal-tag">Tratamiento · [Tipo de caso]</span>
+      <!--
+        ► IMAGEN MODAL 2
+        Reemplaza AQUI_URL_IMAGEN_MODAL_2 con la ruta real, ej: img/caso2-grande.jpg
+      -->
+      <img
+        class="sl-modal-img"
+        src="AQUI_URL_IMAGEN_MODAL_2"
+        alt="Imagen caso 2"
+        onerror="this.outerHTML='<div class=\'sl-modal-img-placeholder\'>📸 Imagen del caso</div>'"
+      />
       <h3 class="sl-modal-title">[Nombre o situación del segundo caso]</h3>
       <div class="sl-modal-info">
-        <div class="sl-modal-row"><span class="sl-modal-label">Paciente</span><span class="sl-modal-value">[Nombre del paciente]</span></div>
-        <div class="sl-modal-row"><span class="sl-modal-label">Situación</span><span class="sl-modal-value">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam.</span></div>
-        <div class="sl-modal-row"><span class="sl-modal-label">Necesidad</span><span class="sl-modal-value">[Descripción de la necesidad específica]</span></div>
-        <div class="sl-modal-row"><span class="sl-modal-label">Contacto</span><span class="sl-modal-value">[+504 XXXX-XXXX]</span></div>
-        <div class="sl-modal-row"><span class="sl-modal-label">Correo</span><span class="sl-modal-value">[correo@ejemplo.com]</span></div>
-      </div>
-      <div class="sl-modal-form">
-        <span class="sl-modal-form-label">Enviar mensaje de apoyo</span>
-        <input type="text" placeholder="Tu nombre" />
-        <input type="text" placeholder="Tu teléfono o correo" />
-        <textarea rows="4" placeholder="¿Cómo deseas ayudar? Escribe tu mensaje aquí..."></textarea>
-        <button class="sl-btn-gold" onclick="slEnviarMensaje(this)">Enviar Mensaje →</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal 3 -->
-  <div class="sl-modal-overlay" id="sl-modal-3">
-    <div class="sl-modal" onclick="event.stopPropagation()">
-      <button class="sl-modal-close" onclick="slCerrarModal('sl-modal-3')">✕</button>
-      <span class="sl-modal-tag">Equipos · [Tipo de necesidad]</span>
-      <h3 class="sl-modal-title">[Nombre o situación del tercer caso]</h3>
-      <div class="sl-modal-info">
-        <div class="sl-modal-row"><span class="sl-modal-label">Descripción</span><span class="sl-modal-value">[Equipo o recurso necesario]</span></div>
-        <div class="sl-modal-row"><span class="sl-modal-label">Propósito</span><span class="sl-modal-value">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit.</span></div>
-        <div class="sl-modal-row"><span class="sl-modal-label">Meta</span><span class="sl-modal-value">[Monto o cantidad necesaria]</span></div>
-        <div class="sl-modal-row"><span class="sl-modal-label">Contacto</span><span class="sl-modal-value">[+504 XXXX-XXXX]</span></div>
-        <div class="sl-modal-row"><span class="sl-modal-label">Correo</span><span class="sl-modal-value">[correo@ejemplo.com]</span></div>
-      </div>
-      <div class="sl-modal-form">
-        <span class="sl-modal-form-label">Enviar mensaje de apoyo</span>
-        <input type="text" placeholder="Tu nombre" />
-        <input type="text" placeholder="Tu teléfono o correo" />
-        <textarea rows="4" placeholder="¿Cómo deseas ayudar? Escribe tu mensaje aquí..."></textarea>
-        <button class="sl-btn-gold" onclick="slEnviarMensaje(this)">Enviar Mensaje →</button>
+        <div class="sl-modal-row">
+          <span class="sl-modal-label">Paciente</span>
+          <span class="sl-modal-value">[Nombre del paciente]</span>
+        </div>
+        <div class="sl-modal-row">
+          <span class="sl-modal-label">Situación</span>
+          <span class="sl-modal-value">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</span>
+        </div>
+        <div class="sl-modal-row">
+          <span class="sl-modal-label">Necesidad</span>
+          <span class="sl-modal-value">[Descripción de la necesidad específica]</span>
+        </div>
+        <div class="sl-modal-row">
+          <span class="sl-modal-label">Contacto</span>
+          <span class="sl-modal-value">[+504 XXXX-XXXX]</span>
+        </div>
+        <div class="sl-modal-row">
+          <span class="sl-modal-label">Correo</span>
+          <span class="sl-modal-value">[correo@ejemplo.com]</span>
+        </div>
       </div>
     </div>
   </div>
 
-<footer class="pie-pagina">
+  <footer class="pie-pagina">
     <div class="nombre-lab">Laboratorio Clínico Santa Lucía</div>
     <p>"El primer paso hacia tu salud"</p>
     <p>2026</p>
-</footer>
+  </footer>
 
   <script src="javascrips/donaciones.js"></script>
+  <script>
+    (function () {
+      var btn  = document.getElementById('btn-menu');
+      var menu = document.getElementById('menu');
+      if (btn && menu) btn.addEventListener('click', function () { menu.classList.toggle('activo'); });
+    })();
+  </script>
 
 </body>
 </html>
