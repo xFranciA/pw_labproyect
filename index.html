@@ -7,66 +7,139 @@
     <title>Inicio - Laboratorio Clínico Santa Lucía</title>
     <link rel="stylesheet" href="estilo/estilo.css">
     <script src="javascript/java.js"></script>
-<style>
-    /* 1. Contenedor principal: Separa del borde y centra */
-    .container {
-        width: 90%;
-        max-width: 1180px;
-        margin: 0 auto; /* Centra el bloque entero */
-        padding: 2rem 0;
-    }
+    <script src="javascript/carusel.js"></script>
+    <style>
+        /* --- ESTILOS GENERALES Y CONTENEDOR --- */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fcfcfc;
+        }
 
-    /* 2. Renderizado de Misión y Visión a la par */
-    .bloque-mision-vision {
-        display: flex;
-        align-items: flex-start; /* Alinea imagen con el inicio del título */
-        gap: 20px;               /* Espacio entre la imagen y las palabras */
-        margin-bottom: 40px;
-        text-align: left;
-    }
+        .container {
+            width: 90%;
+            max-width: 1180px;
+            margin: 0 auto; 
+            padding: 2rem 0;
+        }
 
-    /* Control de dimensiones para que la imagen no se desborde */
-    .bloque-mision-vision img {
-        flex-shrink: 0; 
-        object-fit: contain; /* Asegura que la imagen no se deforme al renderizar */
-        border-radius: 10px;
-    }
+        /* --- CARRUSEL FULL-WIDTH (BORDE A BORDE) --- */
+        .carousel-container {
+            position: relative;
+            width: 100%;       /* Ocupa todo el ancho de la pantalla */
+            height: 500px;     /* Altura imponente */
+            margin: 0;         /* Sin márgenes para tocar los bordes */
+            overflow: hidden;
+            background-color: #000;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
 
-    .bloque-mision-vision h2 {
-        margin-top: 0; /* Quita el espacio superior para alinear con la imagen */
-        color: var(--color-verde);
-    }
+        .carousel-item {
+            display: none;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            animation: fade 0.8s ease-in-out;
+        }
 
-    /* 3. Centrado y renderizado de la sección de noticias */
-    .text-center {
-        text-align: center;
-        margin-top: 50px;
-    }
+        .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Evita que las fotos se deformen */
+        }
 
-    .img-promocion {
-        display: block;
-        margin: 25px auto;   /* Centra la imagen horizontalmente */
-        max-width: 100%;     /* Evita que se salga de la pantalla en móviles */
-        height: auto;        /* Mantiene la proporción original */
-        border-radius: 15px;
-        box-shadow: var(--sombra-media);
-    }
+        .carousel-item.active {
+            display: block;
+        }
 
-    /* Estilo para la lista de valores */
-    .seccion-valores {
-        padding: 25px;
-        background-color: #fff;
-        border-radius: 12px;
-        box-shadow: var(--sombra-suave);
-    }
-    
-    .seccion-valores ul {
-        list-style-position: inside;
-        padding: 0;
-    }
-</style>
+        .caption {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-size: 1.3rem;
+            backdrop-filter: blur(5px);
+        }
 
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.8);
+            border: none;
+            padding: 15px 20px;
+            cursor: pointer;
+            font-size: 24px;
+            border-radius: 50%;
+            transition: 0.3s;
+            z-index: 10;
+        }
 
+        .prev { left: 30px; }
+        .next { right: 30px; }
+        .prev:hover, .next:hover { background: white; scale: 1.1; }
+
+        @keyframes fade {
+            from { opacity: 0.5; }
+            to { opacity: 1; }
+        }
+
+        /* --- SECCIONES DE TEXTO (MISIÓN, VISIÓN, VALORES) --- */
+        .bloque-mision-vision {
+            display: flex;
+            align-items: flex-start; 
+            gap: 25px;               
+            margin-bottom: 50px;
+            text-align: left;
+        }
+
+        .bloque-mision-vision img {
+            flex-shrink: 0; 
+            object-fit: contain; 
+            border-radius: 10px;
+            width: 60px; 
+            height: 60px;
+        }
+
+        .bloque-mision-vision h2 {
+            margin-top: 0; 
+            color: #0056b3; /* Color distintivo para títulos */
+        }
+
+        .bloque-mision-vision ul {
+            margin: 10px 0 0 20px;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* --- SECCIÓN PROMOCIÓN --- */
+        .text-center {
+            text-align: center;
+            margin-top: 60px;
+            padding-bottom: 40px;
+        }
+
+        .img-promocion {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: #eee;
+            margin-bottom: 40px;
+        }
+    </style>
 </head>
 <body>
   
@@ -98,33 +171,49 @@
             </ul>
         </nav>
     </header>
-   
-   
-<main>
-    <div class="container section">
-        
-        <section>
+
+    <main>
+        <section class="carousel-container">
+            <div class="carousel-slide">
+                <div class="carousel-item active">
+                    <img src="imgs/Recepcion.png" alt="Recepción Laboratorio Santa Lucía">
+                    <div class="caption">Nuestras Instalaciones</div>
+                </div>
+                <div class="carousel-item">
+                    <img src="imgs/Sanguinea.jpeg" alt="Laboratorio Química Sanguínea">
+                    <div class="caption">Tecnología de Avanzada</div>
+                </div>
+                <div class="carousel-item">
+                    <img src="imgs/Deteccion.jpeg" alt="Pruebas de Detección">
+                    <div class="caption">Resultados Confiables</div>
+                </div>
+                
+            </div>
+
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        </section>
+
+        <div class="container">
+            
             <div class="bloque-mision-vision">
-                <img src="imgs/mano.png" alt="mision" width="50" height="50">
+                <img src="imgs/mano.png" alt="Icono Misión">
                 <div>
                     <h2>Nuestra Misión</h2> 
-                    <p>Brindar servicios de análisis clínicos confiables, precisos y oportunos, 
-                    con compromiso y calidad humana, respaldados por estándares de calidad 
-                    y ética profesional.</p>
+                    <p>Brindar servicios de análisis clínicos confiables, precisos y oportunos, con compromiso y calidad humana, respaldados por estándares de calidad y ética profesional.</p>
                 </div>
-            </div><br>
+            </div>
 
             <div class="bloque-mision-vision">
-                <img src="imgs/ojo.png" alt="Ojo" width="50" height="50">
+                <img src="imgs/ojo.png" alt="Icono Visión">
                 <div>
                     <h2>Nuestra Visión</h2>
-                    <p>Ser un laboratorio de referencia, reconocido por la excelencia, innovación y compromiso
-                       con la salud de la población, consolidándonos como una institución líder en la región.</p>
+                    <p>Ser un laboratorio de referencia, reconocido por la excelencia, innovación y compromiso con la salud de la población, consolidándonos como una institución líder en la región.</p>
                 </div>
-            </div><br>
-            
+            </div>
 
-            <div>
+            <div class="bloque-mision-vision">
+                <img src="imgs/balanza.png" alt="Icono Valores">
                 <div>
                     <h2>Nuestros Valores</h2>
                     <ul>
@@ -137,23 +226,24 @@
                     </ul>
                 </div>
             </div>
-        </section><br>
 
-        <section class="text-center">
-            <hr> <h2>Noticias y Promociones</h2>
-            <article>
-                <h3>Promoción de Verano</h3>
-                <img src="imgs/promocion.jpg" alt="Promoción de Verano" class="img-promocion">
-            </article>
-        </section>
+            <section class="text-center">
+                <hr>
+                <h2>Noticias y Promociones</h2>
+                <article>
+                    <h3>Promoción de Verano</h3>
+                    <img src="imgs/promocion.jpeg" alt="Promoción de Verano" class="img-promocion">
+                </article>
+            </section>
 
-    </div>
-</main>
+        </div>
+    </main>
+
     <footer class="pie-pagina">
-    <div class="nombre-lab">Laboratorio Clínico Santa Lucía</div>
-    <p>"El primer paso hacia tu salud"</p>
-    <p>2026</p>
-  </footer>
+        <div class="nombre-lab">Laboratorio Clínico Santa Lucía</div>
+        <p>"El primer paso hacia tu salud"</p>
+        <p>2026</p>
+    </footer>
 
 </body>
 </html>
