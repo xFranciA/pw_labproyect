@@ -834,16 +834,7 @@ header div .hamburger-buttons div{
   font-size: 13px;
 }
 
-/* =======================================
-   paginas.css
-   Laboratorio Clínico Santa Lucía
-   Estilos adicionales para: nosotros.html y donaciones.html
-   Requiere: estilo/estilo.css (debe cargarse primero)
-   ======================================= */
-
-/* ══════════════════════════════════════
-   HERO (compartido por ambas páginas)
-   ══════════════════════════════════════ */
+/* paginas donaciones y nosotros */
 
 .sl-main {
   background-color: var(--color-fondo);
@@ -911,9 +902,7 @@ header div .hamburger-buttons div{
   line-height: 1.85;
 }
 
-/* ══════════════════════════════════════
-   SECCIONES INTERNAS
-   ══════════════════════════════════════ */
+
 
 .sl-section {
   max-width: 960px;
@@ -948,9 +937,7 @@ header div .hamburger-buttons div{
   font-style: italic;
 }
 
-/* ══════════════════════════════════════
-   LAYOUTS DE COLUMNAS
-   ══════════════════════════════════════ */
+/* LAYOUTS DE COLUMNAS*/
 
 .sl-two-col {
   display: grid;
@@ -973,9 +960,7 @@ header div .hamburger-buttons div{
   margin-bottom: 16px;
 }
 
-/* ══════════════════════════════════════
-   ESTADÍSTICAS (nosotros)
-   ══════════════════════════════════════ */
+/* ESTADÍSTICAS (nosotros) */
 
 .sl-stats {
   background-color: var(--color-negro-suave);
@@ -1014,9 +999,6 @@ header div .hamburger-buttons div{
   color: rgba(255,255,255,.55);
 }
 
-/* ══════════════════════════════════════
-   UBICACIÓN (nosotros)
-   ══════════════════════════════════════ */
 
 .sl-fachada-img {
   width: 100%;
@@ -1120,10 +1102,6 @@ header div .hamburger-buttons div{
   color: var(--color-negro-suave);
 }
 
-/* ══════════════════════════════════════
-   MISIÓN / FRASE (nosotros)
-   ══════════════════════════════════════ */
-
 .sl-mision-box {
   background-color: var(--color-negro-suave);
   border: 1px solid var(--color-dorado);
@@ -1151,9 +1129,6 @@ header div .hamburger-buttons div{
   font-style: normal;
 }
 
-/* ══════════════════════════════════════
-   CARDS DE ESPECIALIDAD (nosotros)
-   ══════════════════════════════════════ */
 
 .sl-cards-grid {
   display: grid;
@@ -1194,9 +1169,7 @@ header div .hamburger-buttons div{
   line-height: 1.7;
 }
 
-/* ══════════════════════════════════════
-   LÍNEA DE TIEMPO (nosotros)
-   ══════════════════════════════════════ */
+/*Nosotros*/
 
 .sl-timeline {
   display: flex;
@@ -1236,9 +1209,6 @@ header div .hamburger-buttons div{
   line-height: 1.7;
 }
 
-/* ══════════════════════════════════════
-   PERFIL MICROBIÓLOGO (nosotros)
-   ══════════════════════════════════════ */
 
 .sl-profile-card {
   background-color: var(--color-negro-suave);
@@ -1345,7 +1315,6 @@ header div .hamburger-buttons div{
   border-radius: 20px;
 }
 
-/* Areas de expertise */
 .sl-expertise-list {
   display: flex;
   flex-direction: column;
@@ -1385,9 +1354,6 @@ header div .hamburger-buttons div{
   line-height: 1.65;
 }
 
-/* ══════════════════════════════════════
-   VIDEO (nosotros)
-   ══════════════════════════════════════ */
 
 .sl-video-wrap {
   position: relative;
@@ -1407,9 +1373,6 @@ header div .hamburger-buttons div{
   border: none;
 }
 
-/* ══════════════════════════════════════
-   TABLERO DONACIONES
-   ══════════════════════════════════════ */
 
 .sl-board-wrap {
   max-width: 960px;
