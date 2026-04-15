@@ -68,11 +68,11 @@
           <span class="anio">2025</span>
         </div>
         <div class="info-evento">
-          <span class="etiqueta etiqueta-dorada"> Destacado</span>
-          <h3>Aniversario de Apertura - Exámenes con Descuento</h3>
+          <span class="etiqueta etiqueta-dorada">⭐ Destacado</span>
+          <h3>Aniversario de Apertura – Exámenes con Descuento</h3>
           <div class="meta-evento">
-            <span> 8:00 AM - 4:00 PM</span>
-            <span> Sede principal, Santa Lucía</span>
+            <span>🕘 8:00 AM – 4:00 PM</span>
+            <span>📍 Sede principal, Santa Lucía</span>
           </div>
           <p>Celebramos un año más al servicio de la comunidad. Durante este día especial ofrecemos descuentos del 30%
             en hemogramas, glucosa y pruebas de orina. ¡Ven y celebra con nosotros!</p>
@@ -82,24 +82,24 @@
       <div class="fila-3" id="Prom">
 
         <div class="tarjeta-evento tarjeta">
-          <div class="fecha-evento">3 de Junio, 2025</div>
+          <div class="fecha-evento">📅 3 de Junio, 2025</div>
           <h4>Campaña Gratuita de Prueba de VIH</h4>
           <p>Prueba rápida sin costo. Resultados en 20 minutos. Totalmente confidencial.</p>
-          <div class="lugar"> Parque Central - Puesto móvil</div>
+          <div class="lugar">📍 Parque Central – Puesto móvil</div>
         </div>
 
         <div class="tarjeta-evento tarjeta">
-          <div class="fecha-evento"> 20 de Junio, 2025</div>
+          <div class="fecha-evento">📅 20 de Junio, 2025</div>
           <h4>Día del Padre: Perfil Masculino</h4>
           <p>Paquete especial: PSA, glucosa, colesterol y más. Precio especial por tiempo limitado.</p>
-          <div class="lugar"> Sede principal</div>
+          <div class="lugar">📍 Sede principal</div>
         </div>
 
         <div class="tarjeta-evento tarjeta">
-          <div class="fecha-evento"> 5 de Julio, 2025</div>
+          <div class="fecha-evento">📅 5 de Julio, 2025</div>
           <h4>Jornada de Salud Comunitaria</h4>
           <p>Toma de presión, glucosa capilar y orientación nutricional de forma gratuita.</p>
-          <div class="lugar"> Barrio el Centro</div>
+          <div class="lugar">📍 Colonia El Progreso</div>
         </div>
 
       </div>
@@ -107,7 +107,7 @@
       
       <div class="banner-campania" id="CampSal">
         <div>
-          <h3>Campaña Anual de Detección de VIH</h3>
+          <h3>🎗️ Campaña Anual de Detección de VIH</h3>
           <p>
             Cada año realizamos pruebas gratuitas y confidenciales. La detección temprana salva vidas.<br>
             Próxima fecha: <strong style="color: #e8c97a;">3 de Junio, 2025</strong>
@@ -117,7 +117,7 @@
       </div>
 
    
-      <h2 id="EPasados" class="titulo-seccion"> Eventos Pasados</h2>
+      <h2 id="EPasados" class="titulo-seccion">🗂️ Eventos Pasados</h2>
 
       <div class="evento-pasado">
         <div class="fecha-pasado">
@@ -125,8 +125,8 @@
           <div class="dia-p">18</div>
         </div>
         <div class="info-pasado">
-          <h5>Prueba Gratuita de Glucosa - Día de Diabetes</h5>
-          <p>Sede principal · 9:00 AM - 12:00 PM</p>
+          <h5>Prueba Gratuita de Glucosa – Día de Diabetes</h5>
+          <p>Sede principal · 9:00 AM – 12:00 PM</p>
         </div>
         <span class="estado-pasado">Finalizado</span>
       </div>
@@ -149,8 +149,8 @@
           <div class="dia-p">8</div>
         </div>
         <div class="info-pasado">
-          <h5>Día de la Mujer - Citología y Perfil Femenino</h5>
-          <p>Puesto móvil - Mercado Central</p>
+          <h5>Día de la Mujer – Citología y Perfil Femenino</h5>
+          <p>Puesto móvil – Mercado Central</p>
         </div>
         <span class="estado-pasado">Finalizado</span>
       </div>
@@ -158,91 +158,15 @@
     </div>
   </main>
 
+  <!-- PIE DE PAGINA -->
   <footer class="pie-pagina">
     <div class="nombre-lab">Laboratorio Clínico Santa Lucía</div>
     <p>"El primer paso hacia tu salud"</p>
     <p>&copy; 2026</p>
   </footer>
 
-  <script>
-    const botones = document.querySelectorAll('.boton-filtro');
-    botones.forEach(function (boton) {
-      boton.addEventListener('click', function () {
-        botones.forEach(function (b) { b.classList.remove('activo'); });
-        this.classList.add('activo');
-      });
-    });
-  </script>
-  <script>
-    // =============================================
-    //  Animación de aparición al hacer scroll
-    //  Laboratorio Clínico Santa Lucía
-    // =============================================
-
-    (function () {
-      // Estilos base para los elementos animados
-      var estiloBase = document.createElement('style');
-      estiloBase.textContent = `
-    .aparecer {
-      opacity: 0;
-      transform: translateY(40px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-    .aparecer.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  `;
-      document.head.appendChild(estiloBase);
-
-      // Selectores de los elementos que quieres animar
-      var selectores = [
-        '.tarjeta',
-        '.tarjeta-ayuda',
-        '.caja-impacto',
-        '.caja-contexto',
-        '.seccion-redes',
-        '.banner-donar',
-        '.testimonio',
-        '.titulo-seccion',
-        '.contenido-hero',
-        '.fila-3',
-        '.fila-4',
-        '.botones-redes',
-        '.lista-acciones'
-      ];
-
-      // Agrega la clase 'aparecer' a todos los elementos encontrados
-      selectores.forEach(function (selector) {
-        document.querySelectorAll(selector).forEach(function (el) {
-          el.classList.add('aparecer');
-        });
-      });
-
-      // Configura el observador
-      var observador = new IntersectionObserver(function (entradas) {
-        entradas.forEach(function (entrada, i) {
-          if (entrada.isIntersecting) {
-            // Pequeño retraso escalonado si hay varios elementos a la vez
-            setTimeout(function () {
-              entrada.target.classList.add('visible');
-            }, i * 80);
-            observador.unobserve(entrada.target); // Solo anima una vez
-          }
-        });
-      }, {
-        threshold: 0.12,      // Se activa cuando el 12% del elemento es visible
-        rootMargin: '0px 0px -40px 0px'  // Espera un poco antes del borde inferior
-      });
-
-      // Observa todos los elementos con clase 'aparecer'
-      document.querySelectorAll('.aparecer').forEach(function (el) {
-        observador.observe(el);
-      });
-
-    })();
-  </script>
   <script src="javascript/animacion.js"></script>
+
 </body>
 
 </html>
