@@ -146,7 +146,7 @@
         <a href="donaciones.html" class="boton boton-dorado">Quiero Donar</a>
       </div>
 
-      <h2 class="titulo-seccion">💬 Voces de Nuestra Comunidad</h2>
+      <h2 class="titulo-seccion">Voces de Nuestra Comunidad</h2>
 
       <div class="testimonio tarjeta">
         "Gracias a las donaciones pude realizarme el hemograma que necesitaba para mi diagnóstico.
@@ -179,75 +179,6 @@
         }, 2000);
       });
     });
-  </script>
-  <script>
-    // =============================================
-    //  Animación de aparición al hacer scroll
-    //  Laboratorio Clínico Santa Lucía
-    // =============================================
-
-    (function () {
-      // Estilos base para los elementos animados
-      var estiloBase = document.createElement('style');
-      estiloBase.textContent = `
-    .aparecer {
-      opacity: 0;
-      transform: translateY(40px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-    .aparecer.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  `;
-      document.head.appendChild(estiloBase);
-
-      // Selectores de los elementos que quieres animar
-      var selectores = [
-        '.tarjeta',
-        '.tarjeta-ayuda',
-        '.caja-impacto',
-        '.caja-contexto',
-        '.seccion-redes',
-        '.banner-donar',
-        '.testimonio',
-        '.titulo-seccion',
-        '.contenido-hero',
-        '.fila-3',
-        '.fila-4',
-        '.botones-redes',
-        '.lista-acciones'
-      ];
-
-      // Agrega la clase 'aparecer' a todos los elementos encontrados
-      selectores.forEach(function (selector) {
-        document.querySelectorAll(selector).forEach(function (el) {
-          el.classList.add('aparecer');
-        });
-      });
-
-      // Configura el observador
-      var observador = new IntersectionObserver(function (entradas) {
-        entradas.forEach(function (entrada, i) {
-          if (entrada.isIntersecting) {
-            // Pequeño retraso escalonado si hay varios elementos a la vez
-            setTimeout(function () {
-              entrada.target.classList.add('visible');
-            }, i * 80);
-            observador.unobserve(entrada.target); // Solo anima una vez
-          }
-        });
-      }, {
-        threshold: 0.12,      // Se activa cuando el 12% del elemento es visible
-        rootMargin: '0px 0px -40px 0px'  // Espera un poco antes del borde inferior
-      });
-
-      // Observa todos los elementos con clase 'aparecer'
-      document.querySelectorAll('.aparecer').forEach(function (el) {
-        observador.observe(el);
-      });
-
-    })();
   </script>
   <script src="javascript/animacion.js"></script>
 </body>

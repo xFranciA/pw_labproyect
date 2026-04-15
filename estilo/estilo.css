@@ -1,13 +1,16 @@
 /* =======================================
-   styles.css
-   Laboratorio Clinico Santa Lucia
-   Colores: Verde, Dorado y Negro
-   ======================================= */
+  styles.css
+  Laboratorio Clinico Santa Lucia
+  Colores: Verde, Dorado y Negro
+======================================= */
 
 /* Fuentes de Google */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap');
 
-/* --- Colores y valores que se repiten --- */
+/* ======================================
+  VARIABLES
+====================================== */
+
 :root {
   --color-verde:        #1b4332;
   --color-verde-medio:  #2d6a4f;
@@ -23,14 +26,17 @@
   --fuente-texto:  'Poppins', sans-serif;
 }
 
-/* --- Reinicio basico --- */
+/* ======================================
+  REINICIO BASICO
+====================================== */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
@@ -50,10 +56,10 @@ img {
 }
 
 /* ======================================
-   BARRA DE NAVEGACION
-   ====================================== */
+  BARRA DE NAVEGACION
+====================================== */
 
-.hamburger-buttons{
+.hamburger-buttons {
   display: none;
   flex-direction: column;
   justify-content: space-evenly;
@@ -64,8 +70,7 @@ img {
   gap: .2rem;
 }
 
-
-header div .hamburger-buttons div{
+header div .hamburger-buttons div {
   background-color: white;
   height: 0.20rem;
   border-radius: 3px;
@@ -83,7 +88,7 @@ header div .hamburger-buttons div{
   z-index: 100;
 }
 
-.logo-nav{
+.logo-nav {
   margin: 0;
 }
 
@@ -99,7 +104,7 @@ header div .hamburger-buttons div{
 }
 
 .menu-nav.activo {
-  height: 90vh; 
+  height: 90vh;
   padding: 30px 0;
 }
 
@@ -118,7 +123,6 @@ header div .hamburger-buttons div{
 }
 
 @media (max-width: 1025px) {
-
   .hamburger-buttons {
     display: flex;
     cursor: pointer;
@@ -126,43 +130,48 @@ header div .hamburger-buttons div{
 
   .barra-nav {
     position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    height: auto;
+    min-height: 75px;
+    padding: 20px 40px;
   }
 
-  .logo-nav{
+  .logo-nav {
     margin-left: auto;
   }
 
   .menu-nav {
-    position: absolute;
-    top: 75px;
-    left: 0;
+    list-style: none;
     width: 100%;
     background-color: var(--color-negro-suave);
 
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: auto;
 
     gap: 20px;
     padding: 0;
+    margin-left: 0;
+    margin-top: 15px;
 
-    height: 0;
+    max-height: 0;
     overflow: hidden;
 
-    transition: height 0.3s ease;
+    transition: max-height 0.3s ease, padding 0.3s ease;
   }
 
   .menu-nav.activo {
-    height: 100vh;
-    padding: 30px 0;
+    max-height: 500px;
+    padding: 20px 0;
     gap: 1.8rem;
   }
 }
 
 /* ======================================
-   SECCION HERO (cabecera de pagina)
-   ====================================== */
+  SECCION HERO (cabecera de pagina)
+====================================== */
 
 .seccion-hero {
   background-color: var(--color-verde);
@@ -208,8 +217,8 @@ header div .hamburger-buttons div{
 }
 
 /* ======================================
-   BARRA DE FILTROS
-   ====================================== */
+  BARRA DE FILTROS
+====================================== */
 
 .barra-filtros {
   background-color: var(--color-blanco);
@@ -240,8 +249,8 @@ header div .hamburger-buttons div{
 }
 
 /* ======================================
-   CONTENIDO PRINCIPAL
-   ====================================== */
+  CONTENIDO PRINCIPAL
+====================================== */
 
 .contenido-principal {
   max-width: 950px;
@@ -250,8 +259,8 @@ header div .hamburger-buttons div{
 }
 
 /* ======================================
-   TITULOS DE SECCIONES
-   ====================================== */
+  TITULOS DE SECCIONES
+====================================== */
 
 .titulo-seccion {
   font-family: var(--fuente-titulo);
@@ -263,8 +272,8 @@ header div .hamburger-buttons div{
 }
 
 /* ======================================
-   TARJETAS (cards)
-   ====================================== */
+  TARJETAS (cards)
+====================================== */
 
 .tarjeta {
   background-color: var(--color-blanco);
@@ -278,8 +287,8 @@ header div .hamburger-buttons div{
 }
 
 /* ======================================
-   BOTONES
-   ====================================== */
+  BOTONES
+====================================== */
 
 .boton {
   display: inline-block;
@@ -319,9 +328,16 @@ header div .hamburger-buttons div{
   color: var(--color-verde);
 }
 
+.boton-borde-blanco {
+  background: transparent;
+  border: 2px solid var(--color-blanco);
+  color: var(--color-blanco);
+  margin-left: 10px;
+}
+
 /* ======================================
-   ETIQUETAS PEQUEÑAS (badges)
-   ====================================== */
+  ETIQUETAS PEQUEÑAS (badges)
+====================================== */
 
 .etiqueta {
   display: inline-block;
@@ -349,8 +365,8 @@ header div .hamburger-buttons div{
 }
 
 /* ======================================
-   GRILLAS (filas de tarjetas)
-   ====================================== */
+  GRILLAS (filas de tarjetas)
+====================================== */
 
 .fila-2 {
   display: grid;
@@ -374,8 +390,8 @@ header div .hamburger-buttons div{
 }
 
 /* ======================================
-   AVISO / MENSAJE INFORMATIVO
-   ====================================== */
+  AVISO / MENSAJE INFORMATIVO
+====================================== */
 
 .aviso {
   border-radius: 10px;
@@ -398,8 +414,8 @@ header div .hamburger-buttons div{
 }
 
 /* ======================================
-   PIE DE PAGINA (footer)
-   ====================================== */
+  PIE DE PAGINA (footer)
+====================================== */
 
 .pie-pagina {
   background-color: var(--color-negro);
@@ -422,8 +438,8 @@ header div .hamburger-buttons div{
 }
 
 /* ======================================
-   RESPONSIVE (para celulares)
-   ====================================== */
+  RESPONSIVE (para celulares)
+====================================== */
 
 @media (max-width: 768px) {
   .barra-nav {
@@ -456,8 +472,8 @@ header div .hamburger-buttons div{
 }
 
 /* ======================================
-   ESTILOS ESPECIFICOS - EVENTOS
-   ====================================== */
+  ESTILOS ESPECIFICOS - EVENTOS
+====================================== */
 
 /* Evento destacado con fecha grande a la izquierda */
 .evento-destacado {
@@ -639,8 +655,8 @@ header div .hamburger-buttons div{
 }
 
 /* ======================================
-   ESTILOS ESPECIFICOS - COMO AYUDAR
-   ====================================== */
+  ESTILOS ESPECIFICOS - COMO AYUDAR
+====================================== */
 
 /* Caja de contexto */
 .caja-contexto {
@@ -834,7 +850,9 @@ header div .hamburger-buttons div{
   font-size: 13px;
 }
 
-/* paginas donaciones y nosotros */
+/* ======================================
+  PAGINAS DONACIONES Y NOSOTROS
+====================================== */
 
 .sl-main {
   background-color: var(--color-fondo);
@@ -894,8 +912,6 @@ header div .hamburger-buttons div{
   line-height: 1.85;
 }
 
-
-
 .sl-section {
   max-width: 960px;
   margin: 0 auto;
@@ -929,7 +945,7 @@ header div .hamburger-buttons div{
   font-style: italic;
 }
 
-/* LAYOUTS DE COLUMNAS*/
+/* LAYOUTS DE COLUMNAS */
 
 .sl-two-col {
   display: grid;
@@ -990,7 +1006,6 @@ header div .hamburger-buttons div{
   letter-spacing: 1.5px;
   color: rgba(255,255,255,.55);
 }
-
 
 .sl-fachada-img {
   width: 100%;
@@ -1121,7 +1136,6 @@ header div .hamburger-buttons div{
   font-style: normal;
 }
 
-
 .sl-cards-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -1161,7 +1175,7 @@ header div .hamburger-buttons div{
   line-height: 1.7;
 }
 
-/*Nosotros*/
+/* Nosotros */
 
 .sl-timeline {
   display: flex;
@@ -1200,7 +1214,6 @@ header div .hamburger-buttons div{
   color: var(--color-gris);
   line-height: 1.7;
 }
-
 
 .sl-profile-card {
   background-color: var(--color-negro-suave);
@@ -1346,7 +1359,6 @@ header div .hamburger-buttons div{
   line-height: 1.65;
 }
 
-
 .sl-video-wrap {
   position: relative;
   width: 100%;
@@ -1364,7 +1376,6 @@ header div .hamburger-buttons div{
   height: 100%;
   border: none;
 }
-
 
 .sl-board-wrap {
   max-width: 960px;
@@ -1488,9 +1499,9 @@ header div .hamburger-buttons div{
   transform: scale(1.04);
 }
 
-/* ══════════════════════════════════════
-   MODALES (donaciones)
-   ══════════════════════════════════════ */
+/* ======================================
+  MODALES (donaciones)
+====================================== */
 
 .sl-modal-overlay {
   position: fixed;
@@ -1683,9 +1694,9 @@ header div .hamburger-buttons div{
   transform: none;
 }
 
-/* ══════════════════════════════════════
+/* ======================================
   RESPONSIVE
-   ══════════════════════════════════════ */
+====================================== */
 
 @media (max-width: 768px) {
   .sl-hero {
@@ -1729,5 +1740,143 @@ header div .hamburger-buttons div{
 
   .sl-modal {
     padding: 24px;
+  }
+}
+
+/* ======================================
+  CARRUSEL INICIO
+====================================== */
+
+.carousel-section {
+  position: relative;
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 85vh;
+  min-height: 480px;
+  max-height: 720px;
+  overflow: hidden;
+  background-color: var(--color-negro-suave);
+}
+
+.carousel-item {
+  display: none;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-item.active {
+  display: block;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.55);
+}
+
+.carousel-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  padding: 70px 40px;
+}
+
+.carousel-content {
+  max-width: 950px;
+  margin: 0 auto;
+  width: 100%;
+  color: var(--color-blanco);
+}
+
+.carousel-content h1 {
+  font-family: var(--fuente-titulo);
+  font-size: 52px;
+  line-height: 1.12;
+  margin-bottom: 16px;
+  color: var(--color-blanco);
+}
+
+.carousel-content h1 span {
+  color: var(--color-dorado-claro);
+}
+
+.carousel-content p {
+  font-size: 16px;
+  font-weight: 300;
+  opacity: 0.9;
+  max-width: 560px;
+  line-height: 1.8;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(13, 13, 13, 0.45);
+  color: var(--color-blanco);
+  border: 1px solid rgba(255,255,255,0.25);
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 22px;
+  z-index: 10;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.carousel-btn:hover {
+  background-color: rgba(13, 13, 13, 0.75);
+}
+
+.carousel-btn.prev {
+  left: 20px;
+}
+
+.carousel-btn.next {
+  right: 20px;
+}
+
+@media (max-width: 768px) {
+  .carousel-container {
+    height: 70vh;
+    min-height: 420px;
+  }
+
+  .carousel-overlay {
+    padding: 50px 20px 40px;
+  }
+
+  .carousel-content h1 {
+    font-size: 34px;
+  }
+
+  .carousel-content p {
+    font-size: 15px;
+  }
+
+  .boton-borde-blanco {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .carousel-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  .carousel-btn.prev {
+    left: 12px;
+  }
+
+  .carousel-btn.next {
+    right: 12px;
   }
 }
